@@ -1,0 +1,131 @@
+/* Lab:exp_8_Determination of Frictional Co-efficient of Mine Airways
+	 File name: main8.css
+   Author:Prakriti Dhang
+*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+table,th,td{
+    text-align: center;
+    font-size: medium;
+    width: 20%;
+}
+
+
+#ductimg{
+    position: absolute;
+    top:100px;
+    left: 20px;
+}
+
+#ductscale{
+    position: absolute;
+    top:85px;
+    left: 90px;
+}
+
+#pressurebox{
+    position: absolute;
+    top:411px;
+    left: 300px;
+}
+
+#plus{
+    position:absolute;
+    top:330px;
+    left:300px;
+}
+#connect1{
+    position: absolute;
+    top:100px;
+    left: 194px;
+    transform: rotate(-20deg);
+}
+#connect2{
+    position: absolute;
+    top:99px;
+    left: 418px;
+    transform: rotate(-14deg);
+}
+#connect3{
+
+    position: absolute;
+    top:338px;
+    left:234px;
+    transform: rotate(-21deg);
+   /* position: absolute;
+    top:395px;
+    left: 320px;
+    transform: rotate(-20deg);*/
+}
+#connect4{
+    position: absolute;
+    top: 368px;
+    left: 299px;
+    transform: rotate(0deg);
+}
+
+#scale{
+    position: absolute;
+    top: 351px;
+    left: 361px;
+    transform: rotate(-30deg);
+}
+
+#myCanvas{
+    position: absolute;
+    top: 230px;
+    left:469px;
+    transform: rotate(60deg) ;
+    }
+
+#anemometerr{
+    position: absolute;
+    bottom: 300px;  /*  bottom 300px*/
+    left: 595px; /*  left 595px */
+        
+     }
+    
+     /*User postion */
+#user{
+    position: absolute;
+    top:200px; /* top: 200 px */
+    left: 600px; /* right: 245 px */
+    transform: rotateY(-180deg);
+        
+     }
+
+     /*  Flow control device  1 */
+#contldevice1 {
+    position: absolute;
+    left: 20px;
+    top: 400px;
+    animation: tplate1 10s linear;
+   /* margin-left: 50% !important;*/
+  }
+
+ /*  Flow control device 2 */
+#contldevice2 {
+    position: absolute;
+    left: 20px;
+    top: 400px;
+   
+  }
+  /*  Flow control device 3 */
+#contldevice3 {
+    position: absolute;
+    left: 20px;
+    top: 400px;
+  }
+
+  /*  Flow control device 4 */
+ #contldevice4 {
+    position: absolute;
+    left: 20px;
+    top: 400px;
+   
+  }

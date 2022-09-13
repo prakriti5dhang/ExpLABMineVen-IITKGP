@@ -1,0 +1,157 @@
+/* Lab:exp_9_Precise Traversing in a Duct using Pitot Tube
+	 File name: main.css
+   Author:Prakriti Dhang
+*/
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+table,th,td{
+    text-align: center;
+}
+
+
+#ductimg{
+    position: absolute;
+    top:100px;
+    left: 20px;
+}
+
+#measurept{
+    position: absolute;
+    top:10px;
+    left: 490px;
+}
+
+#pressurebox{
+    position: absolute;
+    top:354px;
+    left: 283px;
+}
+
+#scale{
+    position: absolute;
+    top: 350px;
+    left: 361px;
+    transform: rotate(-30deg);
+
+}
+
+#connect3{
+    position: absolute;
+    top:301px;
+    left:249px;
+    transform: rotate(20deg);
+}
+
+#myCanvas{
+    position: absolute;
+    top: 230px;
+    left:469px;
+    transform: rotate(60deg) ;
+    }
+
+
+    #pitot_tube{
+        position: absolute;
+        top:150px;
+        left:192px; 
+    }
+
+    #connect2{
+    position: absolute;
+    top:230px;
+    left:140px;
+    transform: rotate(18deg);
+    }
+
+    #connect1{
+        position: absolute;
+        top:221px;
+        left:216px;
+    }
+
+    #r1{
+        position: absolute;
+    top:73px;
+    left:492px;
+    border-radius: 80%;
+    background-color: red;
+    }
+
+    #r2{
+        position: absolute;
+    top:72px;
+    left:500px;
+    border-radius: 80%;
+    background-color: red;
+    }
+    #r3{
+    position: absolute;
+    top:72px;
+    left:515px;
+    border-radius: 80%;
+    background-color: red;
+    }
+
+    #r4{
+        position: absolute;
+    top:72px;
+    left:530px;
+    border-radius: 80%;
+    background-color: red;
+    }
+
+    #r5{
+        position: absolute;
+    top:72px;
+    left:545px;
+    border-radius: 80%;
+    background-color: red;
+    }
+    #r6{
+        position: absolute;
+    top:72px;
+    left:552px;
+    border-radius: 80%;
+    background-color: red;
+    }
+    #r7{
+        position: absolute;
+    top:72px;
+    left:559px;
+    border-radius: 80%;
+    background-color: red;
+    }
+    #r8{
+    position: absolute;
+    top:72px;
+    left:574px;
+    border-radius: 80%;
+    background-color: red;
+    }
+    #r9{
+        position: absolute;
+    top:72px;
+    left:588px;
+    border-radius: 80%;
+    background-color: red;
+    }
+    #r10{
+        position: absolute;
+    top:72px;
+    left:604px;
+    border-radius: 80%;
+    background-color: red;
+    }
+    #r11{
+        position: absolute;
+    top:73px;
+    left:613px;
+    border-radius: 80%;
+    background-color: red;
+    }

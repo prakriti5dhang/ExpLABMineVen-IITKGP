@@ -1,0 +1,405 @@
+<!--   
+   Lab:exp_4_Calibration of orifice plates
+	 File name: exp4.html
+   Author:Prakriti Dhang
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mining Experiment 4</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script-->
+    
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet"  href="../exp4/css/main.css">
+  
+  <script src="../js/jquery.slim.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/modernizr-1.5.min.js"></script>
+  <script src="../js/Chart.js"></script>
+  <script src="../js/Plotly.js"></script>
+  <script src="../exp4/js/addinptotable.js"></script>
+  <script src="../exp4/js/graphplot_exp4.js"></script>
+  <script src="../exp4/js/graphplotly_exp4.js"></script>
+  <script src="../exp4/js/exp4main.js"></script>
+ 
+  <script src="../js/jquery-1.7.1.min.js"></script>
+  <!--script src="../exp4/js/zoomscale.js"></script-->
+  <!--script src = "https://code.highcharts.com/highcharts.js"></script> 
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script-->
+  <link rel="stylesheet" href="../css/katex.min.css" >
+
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script src="../js/katex.min.js" ></script>
+
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="../js/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+  <!--style>
+    #scale{
+  position:absolute;
+   left: 180px;
+   bottom: -127px;
+   height: 100px;
+   
+ }
+ .img-magnifier-container{
+   position: relative;
+ }
+ .img-magnifier-glass {
+   position: absolute;
+   border: 2px solid #000;
+   border-radius:50%;
+   z-index: 8;
+   cursor: none;
+   
+   /*Set the size of the magnifier glass:*/
+   width: 50px;
+   height:50px;
+ }
+  </style-->
+
+  <style>
+    footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+}
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100" style="background-color: rgb(3, 44, 83);">
+  <header id="header">
+    <div class="container-fluid">
+        <img src="../exp4/images/logo.jpg" class="rounded img-fluid img-resposive" alt="logo" >
+    </div>
+  </header>
+    
+<div class="container-fluid">
+    <div class=" d-flex justify-content-center p-2 ">
+        <h2 style="color:#1bf514">Calibration of Orifice Plates</h2>
+      </div>
+   
+</div>
+
+<div class="content-wrapper">
+  
+<div class=" container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+      
+    <div class="card border-dark" style="height: 350px;">
+        <div class="card-body" style="background-color:rgb(251, 255, 214);">
+          <h4 class="card-title">Duct Setup </h4>
+          <p class="card-text"></p>
+         
+          <img src="../exp4/images/anemometerr-copyb.png" id="anemometerr" class="img-resposive"  alt="Anemometer" style="display: none;" data-toggle="tooltip" data-placement="top"  title="Anemometer">
+          <img src="../exp4/images/user.png" id="user" class="img-resposive" alt="user" style="display: none;" data-toggle="tooltip" data-placement="top"  title="User">
+          <img src="../exp4/images/orificeplate.png" id="orficp" class="img-resposive"  alt="Orific Plate" data-toggle="tooltip" data-placement="bottom"  title="Duct Setup with Oriface Plate" >
+          <img src="../exp4/images/Utnanometer.png" id="utnanometer" class=" img-resposive"  alt="U-tube Nanometer" data-toggle="tooltip" data-placement="right"  title="U-Tube Nanometer" >
+          <img src="../exp4/images/tube1.png" id="utnanometer1" class="  img-resposive"  alt="U-tube Nanometer1" data-toggle="tooltip" data-placement="right"  title="U-Tube Nanometer" style="display:none" >
+          <img src="../exp4/images/tube2.png" id="utnanometer2" class=" img-resposive"  alt="U-tube Nanometer2" data-toggle="tooltip" data-placement="right"  title="U-Tube Nanometer" style="display: none;"> <!-- tube drawn in draw.io and downloaded as 60% transparent -->
+          <img src="../exp4/images/tube3.png" id="utnanometer3" class="  img-resposive"  alt="U-tube Nanometer3" data-toggle="tooltip" data-placement="right"  title="U-Tube Nanometer" style="display: none;"> <!-- tube drawn in draw.io and downloaded as 60% transparent -->
+          <img src="../exp4/images/tube4.png" id="utnanometer4" class="  img-resposive"  alt="U-tube Nanometer4" data-toggle="tooltip" data-placement="right"  title="U-Tube Nanometer" style="display: none;"> <!-- tube drawn in draw.io and downloaded as 60% transparent -->
+          <img src="../exp4/images/tube5.png" id="utnanometer5" class="  img-resposive"  alt="U-tube Nanometer5" data-toggle="tooltip" data-placement="right"  title="U-Tube Nanometer" style="display: none;"> <!-- tube drawn in draw.io and downloaded as 60% transparent -->
+          <img src="../exp4/images/tubelines1.png" id="tubelinesn" class="  img-resposive"  alt="tubelines" >
+          <img src="../exp4/images/tubelines2.png" id="tubelinesn2" class="   img-resposive"  alt="tubelines" >
+          <img src="../exp4/images/plate1_0.5.png" id="plate1" class="  img-resposive" onclick="moveplate1();" alt="plate1" style="cursor:pointer;display: none;" data-toggle="tooltip" data-placement="top"  title="Flow Control Device 1, diameter =0.5">
+          <img src="../exp4/images/plate2_0.52.png" id="plate2" class="  img-resposive" onclick="moveplate2();" alt="plate2" style="cursor:pointer; display: none;" data-toggle="tooltip" data-placement="top"  title="Flow Control Device 2, diameter =0.52">
+          <img src="../exp4/images/plate3_0.55.png" id="plate3" class="  img-resposive" onclick="moveplate3();" alt="plate3" style="cursor:pointer;display: none;" data-toggle="tooltip" data-placement="top"  title="Flow Control Device 3, diameter =0.55">
+          <img src="../exp4/images/plate4_0.58.png" id="plate4" class="  img-resposive" onclick="moveplate4();" alt="plate4" style="cursor:pointer;display: none;" data-toggle="tooltip" data-placement="top"  title="Flow Control Device 4, diameter =0.58">
+          <img src="../exp4/images/plate5_0.6.png" id="plate5" class=" img-resposive" onclick="moveplate5();" alt="plate5" style="cursor:pointer;display: none;" data-toggle="tooltip" data-placement="top"  title="Flow Control Device 5, diameter =0.6">
+        
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+           <div id="anotherread" class="card border-primary rounded" style="display: none;">
+             <div class="card-body" style="background-color:rgb(255, 231, 209);">
+               <div class="card-title" style="text-align: left; font-weight: bold; font-size: large;">Take another Throttle Device for mesurement</div>
+               <button type="button" id="yesbtn" class="btn btn-primary col-3 col-sm-3 col-xs-3 col-lg-3" onclick="yesread(); ">OK</button> <!-- onclick="yesread();-->
+               <button type="button" id="nobtn" class="btn btn-success float-right col-3 col-sm-3 col-xs-3 col-lg-3" data-toggle="modal" data-target="#plotModal"   style="display: none;">Plot</button> <!--onclick="plotgrp();"-->
+             </div>
+           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+           <div id="graphd" class="card " style="display: none; ">
+             <div class="card-body" style="background-color:rgb(224, 235, 255); " >
+               <div class="card-title col-md-12" style="text-align: center; font-weight: bold; font-size: large;">Graph Plot</div>
+               <button type="button" class="btn btn-primary  col-4 col-sm-4 col-xs-3 col-lg-3" onclick="showplot();">Show Graph</button>
+               <button type="button" class="btn btn-warning  col-4 col-sm-4 col-xs-3 col-lg-3" onclick="showbestfit();">Show Best Fit</button>
+               <button type="button" class="btn btn-success  float-right col-3 col-sm-3 col-xs-3 col-lg-3" onclick="window.print()">Print</button>
+
+               <canvas id="myChartexp4" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="height:400px; display: none;"></canvas>
+               <div id="myPlot4"  style="height:400px; width:550px; display: none;"></div>
+             </div>
+           </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <div id="controlpanelv" class="card border-primary rounded">
+        <div class="card-body" style="background-color:rgb(251, 255, 214);">
+          <h4 class="card-title">Control Elements</h4>
+          <p class="card-text" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Start the experiment by clicking the button</p>
+            <button type="button" id="strtbtn" class="btn btn-success col-md-4 col-sm-6 col-xs-3 col-lg-4" data-toggle="modal" data-target="#rotatephone"  >Start</button><!--onclick= " startexp();"-->
+            <button  id="instbtn" class="btn btn-primary float-right col-md-4 col-sm-6 col-xs-6 col-lg-6" data-toggle="collapse" data-target="#instdisp" disabled >Instruction</button> <!-- onmouseover="instbtnd()" onmouseout="instbtnnd()" onclick="instbd();"-->
+            
+            <div id="instdisp" class="collapse card border-primary rounded " > <!--style="display: none;"-->
+              <div class="card-body" style="background-color:rgb(255, 235, 254);">
+            <h4 class="card-title">Instruction</h4>
+         <ol type="1">
+          <li>Hover on the flow control device to check the diameter.</li>
+          <li>Click on the flow control device for regulating the air flow in the duct and measure the static pressure and velocity pressure.</li>
+         
+          <li>Click on the button "Anemometer Traversing" for traversing the anemometer and measure the velocity.</li> 
+        <li>Click on the button "Velocity Reading" thrice to take three velocity readings.</li>
+        <li> Click on the measure button to measure the mean velocity, pressure difference, coefficient of discharge.</li>
+        <li>Then click on the button "Add result to observation table" to add all the values to the table.</li>
+        <li>Click on the "OK" button for regulating the air and take 4 more measurements.</li>
+        <li>Click on the button "Plot" to plot the graph for the coefficient of discharge.</li>
+        
+         </ol>
+                </div>
+                </div> 
+                </div>
+              <div id="formulashow" class="card border-primary rounded" style="display: none;">
+               <div  class="card-body" style="background-color:rgb(251, 255, 214);">
+                 <h4 class="card-title">
+                  <div class="d-flex bd-highlight">
+                    <div class="p-2 flex-grow-1 bd-highlight" style="font-size: 20px ;">Formula Used</div>
+                    <div id="info" class="p-2 bd-highlight" style="display: block;"><svg id="hidebtn" onclick= "showformula();"  width="20" height="20" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg></div>
+                    <div id="exitinfo" class="p-2 bd-highlight" style="display: none;"><button type="button" onclick= "hideformula();" class="close " data-bs-dismiss="alert" aria-label="Close" width="24" height="24">&times;</button></div>
+                   
+                    <!-- class="d-flex-shrink-0 me-2 col-3 float-right-->
+                  </div>
+                   
+                 </h4>
+                   
+                  <div class="alert alert-warning d-flex align-items-center" role="alert">
+                    
+                    <div id="formulacard" class="card-body" style="display: none;"> <p class="card-text"> Air Quantity (Q)</p>
+                      <p style="font-size: 14px;"> Q = \(α A2\sqrt{\frac{2(ΔP)}{ρ-(1-m^2)}}\) .......... eq (1)</p> 
+                      <p class="card-text"> Coefficent of Discharge(α)</p>
+                      <p style="font-size: 14px;">α = \(\frac{Q}{A2\sqrt{\frac{2(ΔP)}{ρ-(1-m^2)}}}\) .......... eq (2)</p>
+                      <p class="card-text"> Pressure Difference (ΔP)</p>
+                      <p style="font-size: 14px;"> P1= ρgh1 , P2=ρgh2 </p>
+                      <p style="font-size: 14px;">ΔP= P1-P2 = ρg(h1-h2)
+                      </p>       
+                      <p style="font-size: 14px;">\({A2\sqrt{\frac{2(ΔP)}{ρ-(1-m^2)}}}\)  .......... eq (3)</p>               
+                      <p style="font-size: 14px;"> where, </p>
+                        
+    <p style="font-size: 14px;">α = coefficient of discharge</p>
+    <p style="font-size: 14px;">A2 = Area of cross-section of the opening of the orifice plate</p>
+    <p style="font-size: 14px;">ΔP = Static pressure difference of the two sides of orifice plate i.e. (P1−P2). In this case, P1 is the static pressure before the plate and P2 is the static pressure after the plate.</p>
+    <p style="font-size: 14px;">ρ = Density of medium; in this case the medium is air so its value is 1.</p>
+    <p style="font-size: 14px;">m = Cross-section area ratio of plate of orifice opening with the duct opening = A2/A1 where as A1 is the cross-section area of the opening of the duct. In this experiment the design is in such a way that the value of m is 0.5.
+                      </p>
+                    </div>
+                  </div>
+               
+                </div>
+
+              </div>
+              
+              
+              <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+              <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+              </symbol>
+            </svg>
+
+            <div id="obsanem" class="collapse card border-primary rounded border border-5" style="display:none;">
+              <div class="card-body" style="background-color:rgb(224, 235, 255);">
+          <p class="card-text" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Click on the Flow Control Device and then Anemometer traversing button</p>
+         
+          <button type="button" id="anmbtn" class="btn btn-primary col-md-6 col-sm-12 col-xs-12 col-lg-6"  onclick="anmeasure();" >Anemometer Traversing</button>
+          </div>
+        </div>
+          <div  id="measure" class="card border-primary rounded" style="display: none;">
+            <div class="card-body" style="background-color:rgb(220, 253, 209);">
+              <h4 class="card-title">Measuring Table </h4>
+              <button type="button" id="velread" class="btn btn-primary col-md-6 col-sm-6  col-xs-6 col-lg-6" onclick="veloread();" data-toggle="popover" data-placement="right" data-trigger="focus" title="Click thrice to take 3 velocity readings">Velocity Reading</button>
+              <div class="form-group row">
+               
+                <label for="vel1" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">1st Velocity Reading</label>
+                <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="velr1" readonly >
+                <label for="vel1unit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(m/s\)</label>
+                <label for="vel2" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">2nd Velocity Reading</label>
+                <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="velr2" readonly>
+                <label for="vel2unit" class=" col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(m/s\)</label>
+                <label for="vel3" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">3rd Velocity Reading</label>
+                <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="velr3" readonly>
+                <label for="vel3unit" class=" col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(m/s\)</label>
+              </div>
+              <button type="button" id="measurebtn" class="btn btn-primary  col-md-6 col-sm-6 col-xs-6 col-lg-6"  onclick="caloutput();" >Click To Measure</button>
+               </div>  </div>
+               <div id="datam" class=" card border-primary rounded" style="display: none;">
+            <div class="card-body" style="background-color:rgb(241, 248, 198);">
+             <h4 class="card-title"></h4>
+             <div class="form-group row">
+              <label for="mvel" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Mean Velocity</label>
+              <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="mvelr" readonly >
+              <label for="mvelunit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(m/s\)</label>
+              
+              <label for="aq" class="col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Area of Cross-Section (A2)</label>
+              <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="aqr" readonly>
+              <label for="aqunit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(m^2\)</label>
+              
+              <label for="dm" class="col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Density of Medium (ρ)</label>
+              <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="dm" readonly>
+              <label for="dmunit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(kg/m^3\)</label>
+              
+              <label for="arearation" class="col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Cross-section of Area Ratio (m)</label>
+                <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="aration" readonly >
+                <label for="arearationunit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(m^2\)</label>
+
+
+                <label for="Pressurediff" class="col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Pressure Difference (ΔP)</label>
+                <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="pdiff" readonly>
+                <label for="pdunit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(KPa\)</label>
+
+                <label for="airflow" class="col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Quality of Air FLow (Q)</label>
+                <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="airflow" readonly>
+                <label for="airflowlunit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(m^3/s\)</label>
+
+                <label for="coeff" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Coefficent Discharge (α)</label>
+                <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="coeff" readonly>
+                <label for="coeffunit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"></label>
+             </div>
+             <button type="button" id="btnobv" class="btn btn-primary col-md-6 col-sm-12 col-xs-12 col-lg-6" disabled onclick="addresult();" >Add Result to Observation Table</button>
+            </div>
+         
+          
+        </div> 
+        <div id="obvtable" class="card border-primary rounded" style="display: none;">
+            <div class="card-body" style="background-color:rgb(255, 235, 254);">
+          <h4 class="card-title">Observation Table</h4>
+          <div class="table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl">
+              <table class="table table-bordered table-hover " id="obtable">
+                <thead>
+                  <tr class="table-primary ">
+                    <th>Obs No.</th>
+                    <th>Avg Velocity</th>
+                    <th>Pressure</th>
+                    <th>\({A2\sqrt{\frac{2(ΔP)}{ρ-(1-m^2)}}}\)</th>
+                    <th>Q</th>
+                    <th>Coeff. of Discharge</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 
+                </tbody>
+              </table>
+              </div>
+              </div>
+              </div>
+            <!--/div-->
+          <!--/div --> 
+        
+      <!--/div--> <!--control panel card ends-->
+
+
+    </div> <!--control panel div ends-->
+    </div> <!-- control panel col ends-->
+</div> <!-- main row ends-->
+</div> <!-- main container ends-->
+</div> <!-- content-wrapper ends-->
+
+<!-- footer-->
+<footer class="mt-auto" style="background-color: rgb(168, 222, 253);">
+  <p class="justify-content-center" style="color:black;">© 2020 Copyright, IIT Kharagpur,
+    <a href="/" style="color: rgb(50, 3, 180); text-decoration: underline;"> Virtual Lab, License Terms </a></p>
+</footer>
+
+
+<!--modal for plot graph-->
+  
+<div class="modal fade" id="plotModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Graph Plot</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Press OK, if you want to proceed for graph plot. Press cancel to exit from plotting
+      </div>
+      <div class="modal-footer">
+         <button type="button" class="btn btn-primary col-xs-3 col-sm-3 col-md-3 col-lg-3" data-dismiss="modal" onclick="showplotgraph();">OK</button>
+        <button type="button" class="btn btn-warning col-xs-4 col-sm-4 col-md-4 col-lg-4" data-dismiss="modal" onclick="cancelgrph();">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!---->
+<!-- model for no more flow control device-->
+
+<div class="modal fade" id="noplatesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Proceed or Plotting</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closemodal();">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        No more plates. Click Plot to view the canvas section.
+      </div>
+      <div class="modal-footer">
+         <button type="button" class="btn btn-primary col-xs-4 col-sm-4 col-md-4 col-lg-4"  data-dismiss="modal" onclick="noplate();">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!----->
+
+<!--modal to rotate phone-->
+  
+<div class="modal fade" id="rotatephone" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">For better view in mobile phone</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Select auto-rotate 
+        <br>OR
+        <br>
+        Select Desktop site 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary col-xs-3 col-sm-3 col-md-3 col-lg-3" data-dismiss="modal" onclick= " startexp();" >OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!---->
+
+<!--script>
+  /* Initiate Magnify Function
+  with the id of the image, and the strength of the magnifier glass:*/
+  magnify("scale", 2);
+  </script-->
+
+</body>
+</html>
