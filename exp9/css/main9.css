@@ -82,6 +82,13 @@ table,th,td{
     border-radius: 80%;
     background-color: red;
     }
+    #tr1{
+    position: absolute;
+    top:114px;
+    left:484px;
+    font-size: small;
+    font-weight: bold;
+    }
 
     #r2{
         position: absolute;
@@ -90,6 +97,14 @@ table,th,td{
     border-radius: 80%;
     background-color: red;
     }
+    #tr2{
+        position: absolute;
+        top:132px;
+        left:490px;
+        font-size: small;
+        font-weight: bold;
+
+        }
     #r3{
     position: absolute;
     top:72px;
@@ -97,6 +112,14 @@ table,th,td{
     border-radius: 80%;
     background-color: red;
     }
+    #tr3{
+        position: absolute;
+        top:150px;
+        left:510px;
+        font-size: small;
+        font-weight: bold;
+
+        }
 
     #r4{
         position: absolute;
@@ -105,6 +128,14 @@ table,th,td{
     border-radius: 80%;
     background-color: red;
     }
+    #tr4{
+        position: absolute;
+        top:170px;
+        left:520px;
+        font-size: small;
+        font-weight: bold;
+
+        }
 
     #r5{
         position: absolute;
@@ -113,6 +144,14 @@ table,th,td{
     border-radius: 80%;
     background-color: red;
     }
+    #tr5{
+        position: absolute;
+        top:190px;
+        left:538px;
+        font-size: small;
+        font-weight: bold;
+
+        }
     #r6{
         position: absolute;
     top:72px;
@@ -120,6 +159,14 @@ table,th,td{
     border-radius: 80%;
     background-color: red;
     }
+    #tr6{
+        position: absolute;
+        top:210px;
+        left:545px;
+        font-size: small;
+        font-weight: bold;
+
+        }
     #r7{
         position: absolute;
     top:72px;
@@ -127,6 +174,15 @@ table,th,td{
     border-radius: 80%;
     background-color: red;
     }
+    #tr7{
+        position: absolute;
+        top:190px;
+        left:557px;
+        font-size: small;
+        font-weight: bold;
+
+        }
+
     #r8{
     position: absolute;
     top:72px;
@@ -134,6 +190,14 @@ table,th,td{
     border-radius: 80%;
     background-color: red;
     }
+    #tr8{
+        position: absolute;
+        top:170px;
+        left:574px;
+        font-size: small;
+        font-weight: bold;
+
+        }
     #r9{
         position: absolute;
     top:72px;
@@ -141,6 +205,14 @@ table,th,td{
     border-radius: 80%;
     background-color: red;
     }
+    #tr9{
+        position: absolute;
+        top:150px;
+        left:585px;
+        font-size: small;
+        font-weight: bold;
+
+        }
     #r10{
         position: absolute;
     top:72px;
@@ -148,6 +220,14 @@ table,th,td{
     border-radius: 80%;
     background-color: red;
     }
+    #tr10{
+        position: absolute;
+        top:132px;
+        left:591px;
+        font-size: small;
+        font-weight: bold;
+
+        }
     #r11{
         position: absolute;
     top:73px;
@@ -155,3 +235,11 @@ table,th,td{
     border-radius: 80%;
     background-color: red;
     }
+    #tr11{
+        position: absolute;
+        top:114px;
+        left:610px;
+        font-size: small;
+        font-weight: bold;
+
+        }

@@ -47,11 +47,11 @@ function showbestfitg(){
       var rwe1 = otable.rows[tabrowindex].cells;
        
       //dataPointai.push( {  y: parseFloat(rwe1[1].innerHTML), x:parseFloat(rwe1[2].innerHTML)});
-      xArray9.push(parseFloat(rwe1[2].innerHTML));
-      yArray9.push(parseFloat(rwe1[1].innerHTML));
+      xArray9.push(parseFloat(rwe1[3].innerHTML));
+      yArray9.push(parseFloat(rwe1[2].innerHTML));
   }
-  var xSum = xArray.reduce(function(a, b){return a + b;}, 0);
-  var ySum = yArray.reduce(function(a, b){return a + b;}, 0);
+  var xSum = xArray9.reduce(function(a, b){return a + b;}, 0);
+  var ySum = yArray9.reduce(function(a, b){return a + b;}, 0);
   var slope = ySum / xSum;
   
   // Generate values
