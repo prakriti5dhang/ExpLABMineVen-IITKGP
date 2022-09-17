@@ -32,7 +32,7 @@ var yValues9 = [];
       var layout = {
         xaxis: {range: [0, 20],dtick: 2, title: "Velocity"},
         yaxis: {range: [0, 30],dtick: 5, title: "Velocity Pressure"},  
-        title: "Calibration"
+        title: "Velocity Vs Velocity Pressure"
       };
       
       Plotly.newPlot("myPlot9", data, layout);
