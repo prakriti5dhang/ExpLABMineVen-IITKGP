@@ -23,13 +23,12 @@ function showpanel(){
      document.getElementById('hd').readOnly= false;
      document.getElementById('ld').readOnly= false;
      document.getElementById('rd').readOnly= false;
-     document.getElementById('wd').readOnly= true;
+    /* document.getElementById('wd').readOnly= true;
      document.getElementById('hd').readOnly= true;
      document.getElementById('ld').readOnly= true;
-     document.getElementById('rd').readOnly= true;
+     document.getElementById('rd').readOnly= true;*/
     
     //$("#btninst").fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300);
-   
    
 }
 
@@ -152,7 +151,7 @@ var goRight = false;
 var moveanemometerstick;
 
 function moveanemometer(){
-
+  document.getElementById('measure').style.display='block';
     moveanemometerstick= setInterval(moveanmetr, 90); /* setInterval (function, frames) */
        
  }
@@ -200,6 +199,9 @@ function moveanemometer(){
 
 
      var avgvel, prdiff, qflow, frictprd;
+     //function measurepts(){
+    //  clckstopanm();
+   //  }
 function clckstopanm() {
     
     document.getElementById('obbtn').disabled=false; /* add observation btn */
@@ -229,13 +231,13 @@ function clckstopanm() {
     ctx.lineTo(2, 240);
     ctx.stroke();
     document.getElementById('msbtn').disabled=true; /* stop anemometer button disables */
-    prdiff=4.18;
+    prdiff=4.21;
     document.getElementById('pdi').value=prdiff;
     avgvel =(((parseFloat(velread1)) + (parseFloat(velread2))+ (parseFloat(velread3)))/3).toFixed(2);
     document.getElementById('avi').value=avgvel;
-    qflow=0.13;
+    qflow=0.12;
     document.getElementById('qfi').value=qflow;
-    frictprd=0.14;
+    frictprd=0.09;
     document.getElementById('fpdi').value=frictprd;
    }
 
@@ -264,11 +266,11 @@ function clckstopanm() {
     document.getElementById('msbtn').disabled=true;
     avgvel =(((parseFloat(velread1)) + (parseFloat(velread2))+ (parseFloat(velread3)))/3).toFixed(2);
     document.getElementById('avi').value=avgvel;
-    prdiff=15.38;
+    prdiff=15.31;
     document.getElementById('pdi').value=prdiff;
-    qflow=0.13;
+    qflow=0.27;
     document.getElementById('qfi').value=qflow;
-    frictprd=0.11;
+    frictprd=0.07;
     document.getElementById('fpdi').value=frictprd;
    }
    if(countanbtnclk ==3){
@@ -298,9 +300,9 @@ function clckstopanm() {
     document.getElementById('pdi').value=prdiff;
     avgvel =(((parseFloat(velread1)) + (parseFloat(velread2))+ (parseFloat(velread3)))/3).toFixed(2);
     document.getElementById('avi').value=avgvel;
-    qflow=0.13;
+    qflow=0.35;
     document.getElementById('qfi').value=qflow;
-    frictprd=0.12;
+    frictprd=0.07;
     document.getElementById('fpdi').value=frictprd;
    }
 
@@ -328,21 +330,21 @@ function clckstopanm() {
     ctx.lineTo(2, 240);
     ctx.stroke();
     document.getElementById('msbtn').disabled=true;
-    prdiff=34.18;
+    prdiff=39;
     document.getElementById('pdi').value=prdiff;
     avgvel =(((parseFloat(velread1)) + (parseFloat(velread2))+ (parseFloat(velread3)))/3).toFixed(2);
     document.getElementById('avi').value=avgvel;
-    qflow=0.13;
+    qflow=0.456;
     document.getElementById('qfi').value=qflow;
-    frictprd=0.13;
+    frictprd=0.059;
     document.getElementById('fpdi').value=frictprd;
    }
-
+   
   }
-
+     
  
 
-  function showformula(){
+  /*function showformula(){
    
     document.getElementById("formulacard").style.display="block";
     document.getElementById("exitinfo").style.display="block";
@@ -354,4 +356,4 @@ function clckstopanm() {
     document.getElementById("formulacard").style.display="none";
     document.getElementById("info").style.display="block";
     document.getElementById("exitinfo").style.display="none";
- }
+ }*/

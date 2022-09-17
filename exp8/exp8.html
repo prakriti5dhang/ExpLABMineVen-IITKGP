@@ -61,7 +61,7 @@
 </style>
 
 </head>
-<body class="d-flex flex-column min-vh-100" style="background-color: rgb(3, 44, 83);" onload="pgload();">
+<body class="d-flex flex-column min-vh-100" style="background-color: rgb(3, 44, 83);" >
   <header id="header">
     <div class="container-fluid">
         <img src="../exp8/images/logo.jpg" class="rounded img-fluid img-resposive" alt="logo" >
@@ -70,7 +70,7 @@
     
 <div class="container-fluid">
     <div class=" d-flex justify-content-center p-2  text-white">
-        <h4 style="color:#1bf514">Determination of Frictional Co-efficient of Mine Airways</h5>
+        <h4 style="color:#1bf514">Determination of Frictional Co-efficient of Mine Airways</h4>
       </div>
    
 </div>
@@ -96,7 +96,7 @@
           <img id ="connect4" src="../exp8/images/connect4_50.png" class=" img-resposive" alt="connect4">
           <img id ="scale" src="../exp8/images/scale.png" class=" img-resposive" alt="scale" data-toggle="tooltip" data-placement="bottom"  title="Scale">
           <canvas id="myCanvas" width="5" height="240" style="border:1px solid #0a0a0a;"></canvas>
-          <img id ="contldevice1" src="../exp8/images/plate1_0.5.png" onclick="moveplate1();" class=" img-resposive" alt="Flow control device 1" style="display: none;" data-toggle="tooltip" data-placement="left"  title="Flow Control Device">
+          <img id ="contldevice1" src="../exp8/images/plate1_0.5.png"  onclick="moveplate1();" class=" img-resposive" alt="Flow control device 1" style="display: none;" data-toggle="tooltip" data-placement="left"  title="Flow Control Device">
           <img id ="contldevice2" src="../exp8/images/plate2_0.52.png" onclick="moveplate2();" class=" img-resposive" alt="Flow control device 2" style="display: none;" data-toggle="tooltip" data-placement="left"  title="Flow Control Device">
           <img id ="contldevice3" src="../exp8/images/plate3_0.55.png" onclick="moveplate3();" class=" img-resposive" alt="Flow control device 3" style="display: none;" data-toggle="tooltip" data-placement="left"  title="Flow Control Device">
           <img id ="contldevice4" src="../exp8/images/plate4_0.58.png" onclick="moveplate4();" class=" img-resposive" alt="Flow control device 4" style="display: none;" data-toggle="tooltip" data-placement="left"  title="Flow Control Device">
@@ -199,13 +199,13 @@
           
           <div class="form-group row">
             <label for="wduct" class="col-sm-6 col-xs-6 col-md-6 col-lg-6" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" >Width of Duct(m)</label>
-            <input type="number" class="form-control col-3 col-sm-4 col-xs-3 col-lg-3" id="wd"   value="0.34" readonly>
+            <input type="number" class="form-control col-3 col-sm-4 col-xs-3 col-lg-3" id="wd"  >
             <label for="hduct" class="col-sm-6 col-xs-6 col-md-6 col-lg-6" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" >Height of Duct(m)</label>
-            <input type="number" class="form-control col-3 col-sm-4 col-xs-3 col-lg-3" id="hd"  value="0.4" readonly>
+            <input type="number" class="form-control col-3 col-sm-4 col-xs-3 col-lg-3" id="hd"  >
             <label for="lduct" class="col-sm-6 col-xs-6 col-md-6 col-lg-6" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" >Length of Duct(m)</label>
-            <input type="number" class="form-control col-3 col-sm-4 col-xs-3 col-lg-3" id="ld"   value="5.41" readonly>
+            <input type="number" class="form-control col-3 col-sm-4 col-xs-3 col-lg-3" id="ld"  >
             <label for="rduct" class="col-sm-6 col-xs-6 col-md-6 col-lg-6" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" >Radius of Duct(m)</label>
-            <input type="number" class="form-control col-3 col-sm-4 col-xs-3 col-lg-3" id="rd"  value="0.25" readonly>
+            <input type="number" class="form-control col-3 col-sm-4 col-xs-3 col-lg-3" id="rd"   >
          
           </div>
           <button type="button" id="obokbtn" class="btn btn-primary col-3 col-sm-4 col-xs-3 col-lg-3"  onclick="checkmd();" >Yes</button>

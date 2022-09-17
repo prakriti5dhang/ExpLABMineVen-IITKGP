@@ -10,8 +10,10 @@ function checkmd(){
  checkld = document.getElementById('ld').value; /* 5.41 and 5.5 */
  checkrd = document.getElementById('rd').value; /* 0.25 */
  
- if (   (0.34 <= checkwd && checkwd<=0.36) && (0.4 <= checkhd && checkhd<=0.6) && (   5.41 <= checkld && checkld<=5.5)&& (checkrd ==0.25 )){
-     document.getElementById('measure').style.display='block';
+ if ( (0.34 >= checkwd || checkwd <= 0.36) && (0.4 >= checkhd || checkhd <= 0.6 ) && ( 5.41 >=checkld || checkld <= 5.5) && (checkrd ==0.25 )){
+  //  measurepts();
+   
+     document.getElementById('measure').style.display='none';
      
      document.getElementById('obokbtn').disabled=true;
      document.getElementById('user').style.display="block";
@@ -29,7 +31,29 @@ function checkmd(){
      document.getElementById('obbtn').disabled=true;
     
  } 
- 
+ //if (   (0.34 <= checkwd && checkwd<=0.36) && (0.4 <= checkhd && checkhd<=0.6) && (   5.41 <= checkld && checkld<=5.5)&& (checkrd ==0.25 ))
+
+
+ /*if ( (0.35 == checkwd) && (0.5 == checkhd ) && ( 5.42 ==checkld )&& (checkrd ==0.25 )){
+    measurepts();
+     document.getElementById('measure').style.display='none';
+     
+     document.getElementById('obokbtn').disabled=true;
+     document.getElementById('user').style.display="block";
+     document.getElementById('anemometerr').style.display="block";
+
+     document.getElementById('contldevice1').style.display="block";
+     document.getElementById('obsanem').style.display="block";
+     document.getElementById('anmbtn').disabled=true;
+     document.getElementById('wd').readOnly= true;
+     document.getElementById('hd').readOnly= true;
+     document.getElementById('ld').readOnly= true;
+     document.getElementById('rd').readOnly= true;
+     document.getElementById('msbtn').disabled=true;
+     document.getElementById('anmbtn').disabled=true;
+     document.getElementById('obbtn').disabled=true;
+    
+ } */
 
  else if(checkwd == ''){
   
