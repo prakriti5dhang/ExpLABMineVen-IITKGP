@@ -122,6 +122,9 @@ ol{
 @media print {
    body {-webkit-print-color-adjust: exact !important;}
    }
+   @page {
+      margin: 1in; 
+    }
 
    @print {
       @page :footer {

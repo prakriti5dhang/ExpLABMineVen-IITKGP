@@ -152,7 +152,7 @@ var moveanemometerstick;
 
 function moveanemometer(){
   document.getElementById('measure').style.display='block';
-    moveanemometerstick= setInterval(moveanmetr, 90); /* setInterval (function, frames) */
+    moveanemometerstick= setInterval(moveanmetr, 60); /* setInterval (function, frames) */
        
  }
        
@@ -169,7 +169,7 @@ function moveanemometer(){
           }
       } else if(goDown) {
           temp++;
-          if(temp == 320) {
+          if(temp == 335) {
               goDown =false;
               goUp = true;
               
@@ -177,20 +177,20 @@ function moveanemometer(){
       }
       $("#anemometerr").css("bottom",temp);
          
-         if(goRight) {
-             temp1++;
-             if(temp1 == 597) { /* move right*/
-                 goRight = false;
-                 goLeft = true;
-             }
-         } else if(goLeft) {
-             temp1--;
-             if(temp1 == 593) { /* move left */
-                 goLeft = false;
-                 goRight = true;
-             }
-         }
-         $("#anemometerr").css("left",temp1);
+        // if(goRight) {
+           //  temp1++;
+           //  if(temp1 == 597) { /* move right*/
+            //     goRight = false;
+            //     goLeft = true;
+            // }
+        // } else if(goLeft) {
+          //   temp1--;
+           //  if(temp1 == 593) { /* move left */
+            //     goLeft = false;
+             //    goRight = true;
+            // }
+       //  }
+       //  $("#anemometerr").css("left",temp1);
  
        
  
