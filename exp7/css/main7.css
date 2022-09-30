@@ -149,3 +149,30 @@ table,th,td{
     top: 400px;
    
   }
+  @media print {
+    body {-webkit-print-color-adjust: exact !important;
+       
+        
+    }
+    }
+    @page {
+        margin: 1in; 
+      }
+      
+    @print {
+       @page :footer {
+          display: none;
+          
+           
+       }
+     
+       @page :header {
+          display: none;
+          
+       }
+   }
+   @media print {
+    #myPlot {
+      padding-right: 1cm;
+    }
+  }

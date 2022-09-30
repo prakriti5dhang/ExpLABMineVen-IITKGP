@@ -16,21 +16,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script-->
 
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css"  id="bootstrap-css">
   <link rel="stylesheet"  href="../exp7/css/main7.css">
   <link rel="stylesheet" href="../css/katex.min.css" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
   <script src="../js/jquery.slim.min.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
   <script src="../js/popper.min.js"></script>
   <script src="../js/modernizr-1.5.min.js"></script>
   <!--script src="../js/jquery-1.7.1.min.js"></script-->
-  <script src="../exp7/js/zoomscaleexp7.js"></script>
+ 
   <!--script src="../js/Chart.js"></script-->
   <script src="../js/Plotly.js"></script> <!--https://cdn.plot.ly/plotly-latest.min.js-->
   <script src="../exp7/js/addinptotable7.js"></script>
   <script src="../exp7/js/checkob7.js"></script>
-  <!--script src="../exp1/js/graphplot.js"></script-->
+ 
   <script src="../exp7/js/graphplotly7.js"></script>
   <script src="../exp7/js/mainexp7.js"></script>
   <script src="../js/katex.min.js" ></script>
@@ -64,7 +65,7 @@
 <body class="d-flex flex-column min-vh-100" style="background-color: rgb(3, 44, 83);" onload="pgload();">
   <header id="header">
     <div class="container-fluid">
-        <img src="../exp8/images/logo.jpg" class="rounded img-fluid img-resposive" alt="logo" >
+        <img src="../exp7/images/logo.jpg" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 rounded img-fluid img-resposive" alt="logo" >
     </div>
   </header>
     
@@ -160,7 +161,7 @@
                <div class="card-title" style="text-align: center; font-weight: bold; font-size: large;">Graph Plot</div>
                <button type="button" class="btn btn-primary  col-3 col-sm-4 col-xs-3 col-lg-3" onclick="showplot();">Plot Graph</button>
                <button type="button" class="btn btn-warning  col-4 col-sm-4 col-xs-3 col-lg-3" onclick="showbestfitg();">Best Fit Graph</button>
-               <button type="button" class="btn btn-success  float-right col-3 col-sm-3 col-xs-3 col-lg-3" onclick="window.print()">Print</button>
+               <button type="button" class="btn btn-success   float-right col-3 col-sm-3 col-xs-3 col-lg-3" onclick="window.print()"><i class="fa fa-print" style="font-size:20px"></i></span> Print</button>
 
                <!--canvas id="myChart" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></canvas-->
                <div id="myPlot"  style="height:400px;"></div>
