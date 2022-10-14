@@ -16,7 +16,46 @@ table,th,td{
 }
 
 
+.timerDisplay{
+  position: relative;
+  width: 40%;
+  background: #feffcd;
+  left: 0%;
+  padding: 0px 0;
+  font-family: 'Roboto mono',monospace;
+  color: #0381bb;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: blue;
+  box-shadow: 0 0 20px rgba(0, 110, 201, 0.25);
+}
+.timerunit{
+  position: relative;
+  width: 40%;
+ 
+  left: 0%;
+  padding: 0px 0;
+  font-family: 'Roboto mono',monospace;
+  color: #0381bb;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+ 
+}
 
+
+.buttons{
+  width: 50%;
+  margin: 40px auto 0 auto;
+  
+}
 
 #psychro{
     position: absolute;
@@ -37,26 +76,46 @@ table,th,td{
   position: absolute;
   top:439px;
   left: 482px;
+  /*animation: rotation 5s linear 0s infinite;
+  animation-play-state: paused;*/
 }
 #readw2{
   position: absolute;
   top:424px;
   left: 468px;
+  animation: rotation 5s linear 0s infinite;
+  animation-play-state: paused;
 }
 
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(358deg)
+  }
+}
 
 #myCanvas{
     position: absolute;
     top: 297px;
     left:491px;
-    
+    display: block;
     }
-    #myCanvas2{
-        position: absolute;
-        top: 304px;
-        left:130px;
+
+    #myCanvas1{
+      position: absolute;
+      top: 297px;
+      left:491px;
+      display: none;
+      }
+
+#myCanvas2{
+    position: absolute;
+    top: 304px;
+    left:130px;
         
-        }
+      }
 
 
 

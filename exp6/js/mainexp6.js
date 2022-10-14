@@ -8,7 +8,8 @@ var count = 0;
 var countanbtnclk; /* count stopwatch button click */
 
 var countw = 0;
-
+var countstemp=1;
+var countsask=1;
 var countanbtnclkw; /* calculate wkcp */
 
 var imgobj1=null;
@@ -16,6 +17,7 @@ var imgobj2=null;
 var imgobj3=null;
 var imgobj4=null;
 var imgod=null;
+
 /*function pgload(){
     
 }*/
@@ -35,29 +37,214 @@ function showpanel(){
    
 }
 
-
+var image2;
+var canvas,ctx, c,ctxr, cre, ctxre;
+let cancelanim;
+let cancelani;
+let cancelanimre;
+var number = 0;
 function startwatch(){
+ /* if(int!==null){
+    clearInterval(int);
+}
+int = setInterval(displayTimer,10);*/
+  /*var image1 = document.getElementById("readw1");
+  image1.style.webkitAnimationPlayState = "running";*/
+  
+  image2 = document.getElementById("readw2");
+  image2.style.webkitAnimationPlayState = "running";
+
   document.getElementById('button-stop').disabled=false;
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
-    let centerXd = 0, centerYd = 50;
-    ctx.strokeStyle = 'red';
-    ctx.lineWidth = 5;
+  //for(){
+    canvas = document.getElementById("myCanvas2");
+    ctx = canvas.getContext("2d");
+    var posY = 135 ;
+    var speed=1;
+
+    function drawLine(){
+    
+    ctx.strokeStyle = 'black';
+    ctx.lineWidth = 6;
     ctx.beginPath();
-    ctx.moveTo(centerXd, centerYd); /*  0-130*/
+    ctx.moveTo(0, posY); /*  0-130*/
     ctx.lineTo(0, 180);
     ctx.stroke();
+}
+
+function moveLine () {
+	posY += speed;
+  
+  if (posY < 0 || posY > canvas.height) {
+	  speed = speed * -1;
+  }
+}
+
+function loop() {
+	// clear old frame;
+ // ctx.clearRect(0,0,canvas.width, canvas.height);
+  moveLine();
+  drawLine();
+cancelani=  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
 
 
-  var c = document.getElementById("myCanvas2");
-  var ctx = c.getContext("2d");
-  let centerX = 0, centerY = 0;
-  ctx.strokeStyle = 'grey';
-  ctx.lineWidth = 5;
-  ctx.beginPath();
-  ctx.moveTo(centerX, centerY);   
-  ctx.lineTo(0, 180);
-  ctx.stroke();
+/*var canva= document.getElementById("myCanvas");
+ var ctxc=canva.getContext('2d');
+
+ var Point=function(x,y){
+  this.startX=x;
+  this.startY=y;
+ };
+
+ var points=[
+
+  new Point(0,0),
+  new Point(0,20),
+  new Point(0,30),
+  new Point(0,40),
+  new Point(0,50),
+  new Point(0,80),
+  new Point(0,100),
+  new Point(0,120),
+  new Point(0,130)
+];
+ ctxc.strokeStyle="red";
+ ctxc.moveTo(points[0].startX, points[0].startY);
+
+ var counter=1;
+ inter=setInterval(function(){
+  var point=points[counter++];
+  ctxc.lineTo(point.startX,point.startY);
+  ctxc.stroke();
+  if(counter>=points.length){
+    clearInterval(inter);
+  }
+  console.log(counter);
+ }, 500);
+
+ ctxc.stroke();*/
+
+ /*ctx.moveTo(0,0,0,0);
+ ctx.lineTo(300,100);
+ ctx.stroke();
+ 
+ ctx.moveTo(0,0,0,0);
+ ctx.lineTo(10,100);
+ ctx.stroke();
+ 
+ ctx.moveTo(10,100,0,0);
+ ctx.lineTo(80,200);
+ ctx.stroke();
+ 
+ ctx.moveTo(80,200,0,0);
+ ctx.lineTo(300,100);
+ ctx.stroke();*/
+
+/* duct set measure */
+ c = document.getElementById("myCanvas");
+ ctxr = c.getContext("2d");
+var  centerY = 130;
+var speedr=1;
+
+function drawLiner(){
+ctxr.strokeStyle = 'red';
+ctxr.lineWidth = 5;
+ctxr.beginPath();
+ctxr.moveTo(0, centerY);   
+ctxr.lineTo(0, 180);
+ctxr.stroke();
+
+
+}
+
+function moveLiner () {
+  centerY += speedr;
+
+if (centerY < 0 || centerY > c.height) {
+  speedr = speedr * -1;
+}
+
+}
+/*function cancelan(){
+if(centerY ==120){
+  cancelAnimationFrame(cancelanim);
+}
+else{
+  requestAnimationFrame(loopr);
+}
+}*/
+
+function loopr() {
+// clear old frame;
+//ctxr.clearRect(0,0,c.width, c.height);
+moveLiner();
+drawLiner();
+//cancelan();
+//clearInterval(loopr);
+    cancelanim= requestAnimationFrame(loopr);
+    
+    
+}
+   
+requestAnimationFrame(loopr);
+
+
+setTimeout(function() {
+ 
+
+
+document.getElementById("myCanvas").style.display="none";
+
+ 
+document.getElementById("myCanvas1").style.display="block";
+
+  
+  
+   
+/* reverse duct canvas moveTo */
+  cre = document.getElementById("myCanvas1");
+   ctxre = cre.getContext("2d");
+  var  centerYre = 0;
+  var speedre=0.05;
+  
+  function drawLinere(){
+  ctxre.strokeStyle = 'red';
+  ctxre.lineWidth = 5;
+  ctxre.beginPath();
+  ctxre.moveTo(0, centerYre);   
+  ctxre.lineTo(0, 180);
+  ctxre.stroke();
+  //requestAnimationFrame(loopre);
+ 
+  }
+  
+  function moveLinere () {
+    centerYre += speedre;
+  
+  if (centerYre < 0 || centerYre > cre.height) {
+    speedre = speedre * -1;
+  }
+   
+  }
+  
+  function loopre() {
+  // clear old frame;
+  ctxre.clearRect(0,0,cre.width, cre.height);
+  moveLinere();
+  drawLinere();
+  cancelanimre=requestAnimationFrame(loopre);
+      
+  }
+     requestAnimationFrame(loopre);
+    
+
+    }, 2000);
+
+ // }
+  //countstemp+=2;
+  //countsask+=2;
+  
   
   document.getElementById('button-start').disabled=true;
 }
@@ -77,7 +264,8 @@ function moveplate1(){  /* move 1st  throtling plate to the required position*/
     if (orgtop == 109) { /* moves to 100 top positon*/
       clearInterval(imgobj1); /* stops to 100 postion*/
       document.getElementById('button-start').disabled=false;
-      
+      document.getElementById("myCanvas").style.display="block";
+      document.getElementById("myCanvas1").style.display="none";
 
     } else {
       orgtop--; 
@@ -102,6 +290,8 @@ function moveplate2(){  /* move 1st  throtling plate to the required position*/
     if (orgtop2 == 109) { /* moves to 100 top positon*/
       clearInterval(imgobj2); /* stops to 100 postion*/
       document.getElementById('button-start').disabled=false;
+      document.getElementById("myCanvas").style.display="block";
+      document.getElementById("myCanvas1").style.display="none";
     } else {
       orgtop2--; 
       iplate2.style.top = orgtop2 + 'px'; 
@@ -124,6 +314,8 @@ function frame() {
   if (orgtop3 == 109) { /* moves to 100 top positon*/
     clearInterval(imgobj3); /* stops to 100 postion*/
     document.getElementById('button-start').disabled=false;
+    document.getElementById("myCanvas").style.display="block";
+      document.getElementById("myCanvas1").style.display="none";
   } else {
     orgtop3--; 
     iplate3.style.top = orgtop3 + 'px'; 
@@ -139,7 +331,12 @@ function frame() {
 
      var airvelv, twv, wkcpv;
 function stopwatch() {
+ // clearInterval(int);
+  image2.style.webkitAnimationPlayState = "paused";
   document.getElementById("measure").style.display="block";
+  cancelAnimationFrame(cancelanim);
+  cancelAnimationFrame(cancelani);
+  //cancelAnimationFrame(cancelanimre);
     document.getElementById('obbtn').disabled=false; /* add observation btn */
     count++;
     countanbtnclk =count;
@@ -217,6 +414,5 @@ if(countanbtnclkw ==4){
   document.getElementById('calwkcp').disabled=true;
 }
 }
-
 
   

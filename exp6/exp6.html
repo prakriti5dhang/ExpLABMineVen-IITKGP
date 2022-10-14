@@ -24,13 +24,13 @@
   <script src="../js/bootstrap.bundle.min.js"></script>
   <script src="../js/popper.min.js"></script>
   <script src="../js/modernizr-1.5.min.js"></script>
+  
   <!--script src="../js/jquery-1.7.1.min.js"></script-->
   
   <!--script src="../js/Chart.js"></script-->
   <script src="../js/Plotly.js"></script> <!--https://cdn.plot.ly/plotly-latest.min.js-->
   <script src="../exp6/js/addinptotable6.js"></script>
   <script src="../exp6/js/checkob6.js"></script>
-  
   <script src="../exp6/js/graphplotly6.js"></script>
   <script src="../exp6/js/mainexp6.js"></script>
   <script src="../js/katex.min.js" ></script>
@@ -64,7 +64,7 @@
 <body class="d-flex flex-column min-vh-100" style="background-color: rgb(3, 44, 83);" >
   <header id="header">
     <div class="container-fluid">
-        <img src="../exp6/images/logo.jpg" class="rounded img-fluid img-resposive" alt="logo" >
+        <img src="../exp6/images/logo.jpg" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 rounded img-fluid img-resposive" alt="logo" >
     </div>
   </header>
     
@@ -91,7 +91,13 @@
           
         
           <canvas id="myCanvas" width="3" height="130" style="border:1px solid #ff0101;"></canvas>
+          <canvas id="myCanvas1" width="3" height="130" style="border:1px solid #ff0101;"></canvas>
           <canvas id="myCanvas2" width="2" height="135" style="border:0px solid #707070;"></canvas>
+
+          <!--- SVG -->
+
+
+<!--- SVG-->
           <img id ="contldevice1" src="../exp6/images/plate1_0.5.png" onclick="moveplate1();" class=" img-resposive" alt="Flow control device 1" style="display: none;" data-toggle="tooltip" data-placement="left"  title="Flow Control Device 1">
           <img id ="contldevice2" src="../exp6/images/plate2_0.52.png" onclick="moveplate2();" class=" img-resposive" alt="Flow control device 2" style="display: none;" data-toggle="tooltip" data-placement="left"  title="Flow Control Device 2">
           <img id ="contldevice3" src="../exp6/images/plate3_0.55.png" onclick="moveplate3();" class=" img-resposive" alt="Flow control device 3" style="display: none;" data-toggle="tooltip" data-placement="left"  title="Flow Control Device 3">
@@ -197,14 +203,18 @@
               <div class="card-body" style="background-color:rgb(255, 235, 254);">
                 
           <p class="card-text" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Stop Watch</p>
-          
-         
-            <input  class="form-control col-xs-4 col-md-4 col-sm-4 col-lg-4" id="time" value="00:00:00" readonly>
-            <p><span id="mins">00</span>:<span id="seconds">00</span>:<span id="tens">00</span></p>
-<button id="button-start" onclick="startwatch();" class="btn btn-success col-xs-3 col-md-3 col-sm-3 col-lg-3">Start Watch</button>
-<button id="button-stop"  onclick="stopwatch();" class="btn btn-danger col-xs-3 col-md-3 col-sm-3 col-lg-3">Stop Watch</button>
+          <div class="timerDisplay ">
+            00 : 00 : 00 : 00
+            </div>
+        <div class="timerunit ">
+               hr : min : sec : ms
+              </div>
+            <!--input  class="form-control col-xs-4 col-md-4 col-sm-4 col-lg-4" id="time" value="00:00:00" readonly-->
+            <!--p><span id="mins">00</span>:<span id="seconds">00</span>:<span id="tens">00</span></p-->
+            <div class="btn-group"><button type="button" id="button-start" onclick="startwatch();" class="btn btn-success col-xs-6 col-sm-6 col-md-6 col-lg-6 mr-5">Start </button>
+<button id="button-stop" type="button" onclick="stopwatch();" class="btn btn-danger col-xs-6 col-sm-6 col-md-6 col-lg-6 mr-5">Stop </button>
 
-            
+            </div>
           
           
           </div>
@@ -376,9 +386,19 @@ $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   
 });
 
-/* inclined tube initial reading */
+/* duct set up  */
 var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
+    ctx.strokeStyle = 'red';
+    ctx.lineWidth = 7;
+    ctx.beginPath();
+    ctx.moveTo(0, 130); /*  0-130*/
+    ctx.lineTo(0, 180);
+    ctx.stroke();
+
+
+    var c1 = document.getElementById("myCanvas1");
+    var ctx = c1.getContext("2d");
     ctx.strokeStyle = 'red';
     ctx.lineWidth = 7;
     ctx.beginPath();
@@ -387,8 +407,9 @@ var c = document.getElementById("myCanvas");
     ctx.stroke();
 
 
-    var c = document.getElementById("myCanvas2");
-    var ctx = c.getContext("2d");
+/* temp */
+    var c2 = document.getElementById("myCanvas2");
+    var ctx = c2.getContext("2d");
     ctx.strokeStyle = 'grey';
     ctx.lineWidth = 5;
     ctx.beginPath();
@@ -403,8 +424,49 @@ var c = document.getElementById("myCanvas");
  
 
 
-</script>
 
+  let [milliseconds,seconds,minutes,hours] = [0,0,0,0];
+  let timerRef = document.querySelector('.timerDisplay');
+  let int = null;
+  
+  document.getElementById('button-start').addEventListener('click', ()=>{
+      if(int!==null){
+          clearInterval(int);
+      }
+      int = setInterval(displayTimer,10);
+  });
+  
+  document.getElementById('button-stop').addEventListener('click', ()=>{
+      clearInterval(int);
+  });
+  
+  
+  
+  function displayTimer(){
+    milliseconds+=10;
+      if(milliseconds == 1000){
+          milliseconds = 0;
+          seconds++;
+          if(seconds == 60){
+              seconds = 0;
+              minutes++;
+              if(minutes == 60){
+                  minutes = 0;
+                  hours++;
+              }
+          }
+      }
+      let h = hours < 10 ? "0" + hours : hours;
+      let m = minutes < 10 ? "0" + minutes : minutes;
+      let s = seconds < 10 ? "0" + seconds : seconds;
+      let ms = milliseconds < 10 ? "00" + milliseconds : milliseconds < 100 ? "0" + milliseconds : milliseconds;
+      //let milisec = ms.substr(0,3);
+  
+      timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${ms} `;  //` ${h} : ${m} : ${s} : ${ms}`;
+  }
+  
+  
+      </script>
 
 
 </body>

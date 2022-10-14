@@ -10,11 +10,17 @@ var nofob ;
 var rows,x;
 var countaddbtnclk;
 var countatbtn=0;
-
+var canvas, ctx, c, ctxr, cre,ctxre;
 function addresult(){
   countatbtn++;
     countaddbtnclk =countatbtn;
-  
+    canvas = document.getElementById("myCanvas2");
+    ctx = canvas.getContext("2d");
+    c = document.getElementById("myCanvas");
+    ctxr = c.getContext("2d");
+    cre = document.getElementById("myCanvas1");
+    ctxre = cre.getContext("2d");
+
     if(countaddbtnclk==1){
     document.getElementById('contldevice1').style.display="block";
     
@@ -25,7 +31,16 @@ function addresult(){
      twvt=document.getElementById('temptw').value;
      wkcpvt=document.getElementById('wkcp').value;
     
+     
+     clearInterval(int);
+    [milliseconds,seconds,minutes,hours] = [0,0,0,0];
+    timerRef.innerHTML = '00 : 00 : 00 : 00 ';
 
+    /*  clear canvas*/
+     ctx.clearRect(0,0,2, 185);
+     ctxr.clearRect(0,0,3, 180);
+     cancelAnimationFrame(cancelanimre);
+     ctxre.clearRect(0,0,3,180);
 
       var tabrowindex=0;
  otable= document.getElementById('obtable6');
@@ -78,9 +93,16 @@ var row = otable.insertRow(++tabrowindex); // Row increment
       airvelvt=document.getElementById('airvel').value;
        twvt=document.getElementById('temptw').value;
        wkcpvt=document.getElementById('wkcp').value;
-      
-  
-  
+       clearInterval(int);
+       [milliseconds,seconds,minutes,hours] = [0,0,0,0];
+       timerRef.innerHTML = '00 : 00 : 00 : 00 ';
+
+       /*  clear canvas*/
+       ctx.clearRect(0,0,2, 185);
+       ctxr.clearRect(0,0,3, 180);
+       cancelAnimationFrame(cancelanimre);
+       ctxre.clearRect(0,0,3,180);
+        
         var tabrowindex=1;
    otable= document.getElementById('obtable6');
   
@@ -127,9 +149,15 @@ var row = otable.insertRow(++tabrowindex); // Row increment
     airvelvt=document.getElementById('airvel').value;
      twvt=document.getElementById('temptw').value;
      wkcpvt=document.getElementById('wkcp').value;
-    
+     clearInterval(int);
+     [milliseconds,seconds,minutes,hours] = [0,0,0,0];
+     timerRef.innerHTML = '00 : 00 : 00 : 00 ';
 
-
+     /*  clear canvas*/
+     ctx.clearRect(0,0,2, 185);
+     ctxr.clearRect(0,0,3, 180);
+     cancelAnimationFrame(cancelanimre);
+     ctxre.clearRect(0,0,3,180);
       var tabrowindex=2;
  otable= document.getElementById('obtable6');
 
@@ -177,6 +205,15 @@ var row = otable.insertRow(++tabrowindex); // Row increment
      twvt=document.getElementById('temptw').value;
      wkcpvt=document.getElementById('wkcp').value;
     
+     clearInterval(int);
+     [milliseconds,seconds,minutes,hours] = [0,0,0,0];
+     timerRef.innerHTML = '00 : 00 : 00 : 00 ';
+
+     /*  clear canvas*/
+     ctx.clearRect(0,0,2, 185);
+     ctxr.clearRect(0,0,3, 180);
+     cancelAnimationFrame(cancelanimre);
+     ctxre.clearRect(0,0,3,180);
 
 
       var tabrowindex=3;
