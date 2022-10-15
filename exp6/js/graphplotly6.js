@@ -1,5 +1,5 @@
-/* Lab:exp_7_Determination of Shock Pressure Loss in Presence of Tub and Estimation of Drag Co-efficient
-	 File name: graphplotly7.js
+/* Lab:exp_6_Establishment of the Relationship between Kata Cooling Power and Air Velocity
+	 File name: graphplotly6.js
    Author:Prakriti Dhang
 */
 
