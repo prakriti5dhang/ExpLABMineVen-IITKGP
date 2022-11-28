@@ -1,0 +1,474 @@
+<!--   
+   Lab:exp_5_Theory of Fan Rating Test
+	 File name: exp5.html
+   Author:Prakriti Dhang
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mining Experiment 5</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script-->
+
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet"  href="../exp5/css/main5.css">
+  <link rel="stylesheet" href="../css/katex.min.css" >
+  
+  <script src="../js/jquery.slim.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/modernizr-1.5.min.js"></script>
+  
+  <!--script src="../js/jquery-1.7.1.min.js"></script-->
+  
+  <!--script src="../js/Chart.js"></script-->
+  <script src="../js/Plotly.js"></script> <!--https://cdn.plot.ly/plotly-latest.min.js-->
+  <script src="../exp5/js/addinptotable5.js"></script>
+  <script src="../exp5/js/checkdlexp5.js"></script>
+  <script src="../exp5/js/graphplotly5.js"></script>
+  <script src="../exp5/js/mainexp5.js"></script>
+  <script src="../js/katex.min.js" ></script>
+  <script defer src="../js/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+ }
+ /*.img-magnifier-container{
+   position: relative;
+ }
+ .img-magnifier-glass {
+   position: absolute;
+   border: 1px solid #000;
+   border-radius:70%;
+   z-index: 8;
+   cursor: none;
+   
+   /*Set the size of the magnifier glass:*/
+   /*width: 70px;
+   height:70px;
+ }*/
+ 
+
+</style>
+
+</head>
+<body class="d-flex flex-column min-vh-100" style="background-color: rgb(3, 44, 83);" onload="pgload();"  >
+  <header id="header">
+    <div class="container-fluid">
+        <img src="../exp5/images/logo.jpg" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 rounded img-fluid img-resposive" alt="logo" >
+    </div>
+  </header>
+    
+<div class="container-fluid">
+    <div class=" d-flex justify-content-center p-2  text-white">
+        <h4 style="color:#1bf514">Theory of Fan Rating Test</h4>
+      </div>
+   
+</div>
+
+  <div >
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <div class="card border-primary rounded" style="height: 550px;">
+        <div class="card-body" style="background-color:#E6FFCC;">
+          <h4 class="card-title">Machine set up</h4>
+          
+         <img  id ="ductimg" src="../exp5/images/fantest-duct.png" class="img-responsive " alt="duct" />
+         <img class=" img-responsive " id="fan" src="../exp5/images/fan.png" alt="fan"  />
+         <img  id ="user" src="../exp5/images/user.png" class=" img-responsive " alt="user" style="display: none;" />
+         <img   id ="anemoter" src="../exp5/images/anemometerr.png" class=" img-responsive " alt="anemometer" style="display: none;" />
+         
+         <img class=" img-responsive " id="on" src="../exp5/images/on.png" alt="on"  onclick="clickon();" style="cursor:pointer;"/>
+          <img class=" img-responsive " id="off" src="../exp5/images/off.png" alt="off" onclick="clickoff();" style="cursor:pointer;"/>
+        
+          <img class="d-flex img-resposive img-fluid mx-auto" id="pitottube" src="../exp5/images/ptube.png" alt="pitot tube" onclick="clickoff();" style="cursor:pointer;"/>
+
+          <canvas id="myCanvas" width="10" height="40" style="border:0px solid #ff0101; "></canvas>
+          <canvas id="myCanvas1" width="10" height="40" style="border:0px solid #ff0101; "></canvas>
+          <canvas id="myCanvas2" width="7" height="20" style="border:0px solid #e00f0f; "></canvas>
+          <canvas id="myCanvas3" width="7" height="20" style="border:0px solid #ee1515; "></canvas>
+
+          <img id ="contldevice1" src="../exp5/images/plate1_0.5.png" onclick="moveplate1();" class=" img-responsive" alt="Flow control device 1" style="display: none;" data-toggle="tooltip" data-placement="left"  title="Flow Control Device 1">
+          <img id ="contldevice2" src="../exp5/images/plate2_0.52.png" onclick="moveplate2();" class=" img-responsive" alt="Flow control device 2" style="display: none;" data-toggle="tooltip" data-placement="left"  title="Flow Control Device 2">
+          <img id ="contldevice3" src="../exp5/images/plate3_0.55.png" onclick="moveplate3();" class=" img-responsive" alt="Flow control device 3" style="display: none;" data-toggle="tooltip" data-placement="left"  title="Flow Control Device 3">
+          <img id ="contldevice4" src="../exp5/images/plate4_0.58.png" onclick="moveplate4();" class=" img-responsive" alt="Flow control device 4" style="display: none;" data-toggle="tooltip" data-placement="left"  title="Flow Control Device 4">
+          <img id ="contldevice5" src="../exp5/images/plate5_0.6.png" onclick="moveplate5();" class=" img-responsive" alt="Flow control device 5" style="display: none;" data-toggle="tooltip" data-placement="left"  title="Flow Control Device 5">
+        </div>
+          
+         
+       <!--div class="img-magnifier-glass"></div-->
+         
+        
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+          <div id="flwdevice" class="card border-primary rounded" style="display:none;">
+            <div class="card-body" style="background-color:rgb(255, 228, 251); "  >
+              <div class="card-title" style="text-align: center; font-weight: bold; font-size: large;">Do you want to take another Throttle Device for  measurement?</div>
+              <button type="button" id="yfldb" class="btn btn-primary  col-3 col-sm-4 col-xs-3 col-lg-3" onclick="yesflwdevice();">Yes</button>
+               
+              </div>
+              </div>
+
+          
+           <div id="graphd" class="card border-primary rounded" style="display:none;">
+             <div class="card-body" style="background-color:rgb(224, 235, 255); "  >
+               <div class="card-title" style="text-align: center; font-weight: bold; font-size: large;">Graph Plot</div>
+               <button type="button" class="btn btn-primary  col-3 col-sm-4 col-xs-3 col-lg-3" onclick="showplot();">Plot Graph</button>
+               <button type="button" class="btn btn-warning  col-4 col-sm-4 col-xs-3 col-lg-3" onclick="showbestfitg();">Best Fit Graph</button>
+               <button type="button" class="btn btn-success  float-right col-3 col-sm-3 col-xs-3 col-lg-3" onclick="window.print()">Print</button>
+
+               <!--canvas id="myChart" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></canvas-->
+               <div id="myPlot"  style="height:400px;"></div>
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+      <div class="card border-primary rounded">
+        <div class="card-body" style="background-color:rgb(251, 255, 214);">
+          <h4 class="card-title">Control Elements</h4>
+          <p class="card-text" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">To start the experiment click the "Start" button</p>
+            <button type="button" id="yesbtn" class="btn btn-primary col-md-3 col-sm-3 col-xs-3 col-lg-3"  data-toggle="modal" data-target="#rotatephone" >Start</button>
+            <!--button type="button" id="nobtn" class="btn btn-warning col-md-3 col-sm-3 col-xs-3 col-lg-3" data-toggle="modal" data-target="#cancelexp" >No</button-->
+            <button type="button" id="btninst" class="btn btn-success float-right col-md-3 col-sm-3 col-xs-3 col-lg-3" data-toggle="collapse" data-target="#instdisp1" disabled>Instruction</button>
+</div></div>
+            <div id="instdisp1" class="collapse card border-primary rounded " > <!--style="display: none;"-->
+              <div class="card-body" style="background-color:rgb(220, 253, 209);">
+            <h4 class="card-title">Instruction</h4>
+            
+         <ol type="1">
+          <li>At the traversing section in the duct plane the Pitot static tube with the nose at center, facing the air in the air stream</li>
+          <li>To the Pitot tube connect the Askania to measure velocity pressure, and inclined tube manometer to measure the static pressure. Level these two instruments and take their initial reading.</li>
+          <li>Make wattmeter connections and start the fan. Use the symmetrical conical throttle provided at the duct outlet to vary the quantity in the duct.</li>
+          <li>For each throttle bottle measure the</li>
+            <ul>
+              <li>Motor input power</li>
+              <li>Fan RPM</li>
+              <li>Static and velocity pressures at the traverse section
+              </li>
+              
+            </ul>
+          
+<li>Measure the L and D values; obtain wet and dry bulb temperatures and barometric pressures at the fan inlet. Obtain a representative of dry bulb temperature inside the duct.</li>
+  <li> Note: Diameter of the duct should be between 0.50 and 0.55. Lenght of the duct should be between 4.00 and 4.20</li>
+         </ol>
+                </div>
+                </div> 
+                
+           
+        
+          <div  id="measure" class=" card border-primary rounded" style="display: none;">
+            <div class="card-body" style="background-color:rgb(224, 235, 255);">
+              <h4 class="card-title">Insert Diameter and Lenght of the Duct </h4>
+              
+              <div class="form-group row">
+                <!-- Diameter-->
+                <label for="diamd" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Diameter of Duct</label>
+                <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="diam" >
+                <label for="diaunit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(m\)</label>
+                <!--  Length-->
+                <label for="length" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Length </label>
+                <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="len" >
+                <label for="lengthunit" class=" col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(m\)</label>
+                
+                 <!-- check dia and len-->
+                 
+                 <button type="button" id="calbtn" onclick="checkm();" class="btn btn-warning col-xs-4 col-md-4 col-sm-4 col-lg-4">OK</button>
+                </div>
+                <div class="form-group row">
+                 <label for="inppow" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Input power </label>
+                <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="inpp" value="" readonly >
+                <label for="lengthunit" class=" col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(Kw\)</label>
+              </div>
+
+              </div></div>
+
+              <div id="obsanem" class="collapse card border-primary rounded border border-5" style="display:none;">
+                <div class="card-body" style="background-color:rgb(224, 235, 255);">
+            <p class="card-text" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Click on the Flow Control Device and switch on the fan and then click start traversing button</p>
+            <button type="button" id="antvb" onclick="antrv();" class="btn btn-success col-xs-4 col-md-4 col-sm-4 col-lg-4" disabled>Start Traversing</button>
+            
+            </div>
+          </div>
+
+          <div id="velread" class=" card border-primary rounded" style="display: none;">
+            <div class="card-body" style="background-color:rgb(232, 255, 219);">
+              <button type="button" id="velrb" onclick="velr();" class="btn btn-warning col-xs-4 col-md-4 col-sm-4 col-lg-4" disabled>1st Velocity Reading</button>
+              <div class="form-group row">
+               
+                <label for="vel1" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">1st Velocity Reading</label>
+                <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="velr1" readonly >
+                <label for="vel1unit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(m/s\)</label>
+                <label for="vel2" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">2nd Velocity Reading</label>
+                <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="velr2" readonly>
+                <label for="vel2unit" class=" col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(m/s\)</label>
+                <label for="vel3" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">3rd Velocity Reading</label>
+                <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="velr3" readonly>
+                <label for="vel3unit" class=" col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(m/s\)</label>
+              </div>
+              <label id="fanoff" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold; color: red; visibility: hidden;">Switch off the fan</label>
+              <button type="button" id="mdatab" class="btn btn-primary  col-xs-6 col-sm-6 col-md-6 col-lg-6" onclick="msdata();" disabled>Measure</button>
+            </div>
+            
+          
+          </div>
+
+
+              <div id="measureddata" class=" card border-primary rounded" style="display: none;">
+                
+                <div class="card-body" style="background-color:rgb(224, 235, 255);">
+                  <div class="form-group row">
+                  <label for="avgv" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Average Velocity </label>
+                  <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="avgvi" value="" readonly >
+                  <label for="avgvunit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(m/s\)</label>
+
+                  <label for="stp" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Static Pressure </label>
+                  <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="stpi" value="" readonly >
+                  <label for="stpunit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(Pa\)</label>
+                
+                  <label for="velp" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Velocity Pressure </label>
+                  <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="velpi" value="" readonly >
+                  <label for="velpunit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(Pa\)</label>
+                
+                  <label for="fl" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Frictional Loss </label>
+                  <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="fli" value="" readonly >
+                  <label for="flunit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(Pa\)</label>
+                
+                  <label for="str" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Straighterner </label>
+                  <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="stri" value="" readonly >
+                  <label for="strunit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(Pa\)</label>
+                
+                  <label for="tp" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Total Pressure </label>
+                  <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="tpi" value="" readonly >
+                  <label for="tpunit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(Pa\)</label>
+                
+                  <label for="qaunt" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Quantity </label>
+                  <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="qti" value="" readonly >
+                  <label for="qtunit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(m^3/s\)</label>
+                
+                  <label for="arop" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Air Output </label>
+                  <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="aropi" value="" readonly >
+                  <label for="aropunit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">\(Watts\)</label>
+                
+
+
+
+
+                </div>
+                  
+                  <button type="button" id="effb" class="btn btn-primary  col-xs-6 col-sm-6 col-md-6 col-lg-6" onclick="effdata();" disabled >Calculate Efficiency</button>
+                </div>
+                </div>
+                <div id="effdatad" class=" card border-primary rounded" style="display: none;">
+                  <div class="card-body " id="efficiency" style="background-color:rgb(244, 224, 255); display: none;">
+                    <div class="form-group row">
+                    <label for="eff" class=" col-xs-5 col-md-5 col-sm-5 col-lg-5" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Efficiency </label>
+                    <input type="number" class="form-control col-xs-3 col-md-3 col-sm-3 col-lg-3" id="effc" value="" readonly >
+                    <label for="effunit" class="col-xs-4 col-md-4 col-sm-4 col-lg-4" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">&#37;</label>
+                  
+                  </div>
+                    <button type="button" id="obbtn" class="btn btn-success  col-xs-6 col-sm-6 col-md-6 col-lg-6" onclick="addresult();" disabled>Add Result to Observation Table</button>  
+                  </div>
+              </div>
+              
+              
+              
+              <div id="obvtable5" class="card border-primary rounded" style="display: none;">
+                <div class="card-body" style="background-color:rgb(241, 248, 198);">
+              <h4 class="card-title">Observation Table</h4>
+              
+              <div class="table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl" style="overflow-x:auto;">
+              <table class="table table-bordered table-hover" id="obtable5">
+                <thead>
+                  <tr class="table-primary">
+                    <th>Average Velocity</th>
+                    <th>Static Pressure </th>
+                    <th>Velocity Pressure</th>
+                    <th>Frictional Loss</th>
+                    <th>Straightener</th>
+                    <th>Total Pressure</th>
+                    <th>Quantity</th>
+                    <th>Air Output</th>
+                    <th>Efficiency</th>
+                    
+                     
+
+
+                  </tr>
+                </thead>
+                <tbody>
+                 
+                </tbody>
+              </table>
+              
+
+              </div>
+            </div>
+          </div>
+        </div>
+      <!--/div>
+
+
+    </div-->
+    </div>
+</div>
+</div>
+</div> <!--container-wrapper ends-->
+
+<!-- modal for better view-->
+<div class="modal fade" id="rotatephone" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="background-color: rgb(250, 255, 224);">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">For better view in mobile phone</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Select auto-rotate OR
+        Select Desktop site 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary col-xs-3 col-sm-3 col-md-3 col-lg-3" data-dismiss="modal" onclick="showpanel();" >OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!---->
+
+<!-- check no of obs-->
+<div class="modal fade" id="checkobsn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="background-color: rgb(250, 255, 224);">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Alert</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="alertmsg"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary col-xs-3 col-sm-3 col-md-3 col-lg-3" data-dismiss="modal" onclick="alertmsg();" >OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!---->
+
+<!-- check table obs no -->
+<div class="modal fade" id="obtblnum" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="background-color: rgb(250, 255, 224);">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Alert</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="alertmsgob"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary col-xs-3 col-sm-3 col-md-3 col-lg-3" data-dismiss="modal" onclick="alertmsgob();" >OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!---->
+
+
+<!-- modal for change pressure-->
+
+
+
+
+
+<!---->
+
+
+
+<!-- footer-->
+
+<footer class="mt-auto" style="background-color: rgb(168, 222, 253);">
+  <p class="justify-content-center" style="color:black;">© 2011 Copyright, IIT Kharagpur,
+    <a href="/" style="color: rgb(50, 3, 180); text-decoration: underline;"> Virtual Lab, License Terms </a></p>
+</footer>
+
+<!-- footer-->
+
+
+
+
+<script>
+  
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+
+var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.strokeStyle = 'red';
+    ctx.lineWidth = 16;
+    ctx.beginPath();
+    ctx.moveTo(0, 38); 
+    ctx.lineTo(0, 40);
+    ctx.stroke();
+
+
+    var c = document.getElementById("myCanvas1");
+    var ctx = c.getContext("2d");
+    ctx.strokeStyle = 'red';
+    ctx.lineWidth = 17;
+    ctx.beginPath();
+    ctx.moveTo(0, 38); 
+    ctx.lineTo(0, 40);
+    ctx.stroke();
+
+
+
+    var c = document.getElementById("myCanvas2");
+    var ctx = c.getContext("2d");
+    ctx.strokeStyle = 'white';
+    ctx.lineWidth = 13;
+    ctx.beginPath();
+    ctx.moveTo(0, 19); 
+    ctx.lineTo(0, 20);
+    ctx.stroke();
+
+
+    var c = document.getElementById("myCanvas3");
+    var ctx = c.getContext("2d");
+    ctx.strokeStyle = 'white';
+    ctx.lineWidth = 12;
+    ctx.beginPath();
+    ctx.moveTo(0, 19); 
+    ctx.lineTo(0, 20);
+    ctx.stroke();
+
+
+
+  
+      </script>
+
+
+</body>
+</html>
+
+<!--  http://shodhbhagirathi.iitr.ac.in:8081/jspui/bitstream/123456789/10090/1/MIED62884.pdf -->

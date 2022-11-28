@@ -1,0 +1,172 @@
+/* Lab:exp_5_Theory of Fan Rating Test
+	 File name: main5.css
+   Author:Prakriti Dhang
+*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+table,th,td{
+    text-align: center;
+    font-size: medium;
+    width: 20%;
+}
+
+#fan{
+  position: absolute;
+  top:250px;
+  left: 150px;
+  animation: rotation 0.8s linear 0s infinite;
+  animation-play-state: paused;
+}
+
+#pitottube{
+  position: absolute;
+  top:263px;
+  left: 331px;
+}
+
+
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(358deg)
+  }
+}
+
+#on{
+  position: absolute;
+  top:99px;
+  left: 65px;
+  width: 20px;
+  height:20px;
+  
+}
+
+#off{
+  position: absolute;
+  top: 99px;
+  left: 95px;
+  width: 20px;
+  height:20px;
+  
+}
+
+#ductimg{
+    position: absolute;
+    top:65px;
+    left: 50px;
+}
+#user{
+  position: absolute;
+  top:350px;
+  left: 490px;
+}
+#anemoter{
+    position: absolute;
+    bottom:60px;
+    left: 532px;
+}
+
+
+#myCanvas{
+    position: absolute;
+    top: 308px;
+    left:379px;
+    
+    }
+#myCanvas1{
+      position: absolute;
+      top: 308px;
+      left:439px;
+      
+      }
+
+#myCanvas2{
+        position: absolute;
+        top: 350px;
+        left:343px;
+        transform: rotate(180deg);
+        
+        }
+#myCanvas3{
+          position: absolute;
+          top: 349px;
+          left:404px;
+          transform: rotate(180deg);
+          
+          }
+
+
+
+     /*  Flow control device  1 */
+#contldevice1 {
+    position: absolute;
+    left: 516px;
+    top: 400px;
+    animation: tplate1 10s linear;
+   /* margin-left: 50% !important;*/
+  }
+
+ /*  Flow control device 2 */
+#contldevice2 {
+    position: absolute;
+    left: 516px;
+    top: 400px;
+   
+  }
+  /*  Flow control device 3 */
+#contldevice3 {
+    position: absolute;
+    left: 516px;
+    top: 400px;
+  }
+
+
+#contldevice4 {
+    position: absolute;
+    left: 516px;
+    top: 400px;
+  }
+  
+#contldevice5 {
+    position: absolute;
+    left: 516px;
+    top: 400px;
+  }
+
+  @media print {
+    body {-webkit-print-color-adjust: exact !important;
+       
+        
+    }
+    }
+    @page {
+        margin: 1in; 
+      }
+      
+    @print {
+       @page :footer {
+          display: none;
+          
+           
+       }
+     
+       @page :header {
+          display: none;
+          
+       }
+   }
+   @media print {
+    #myPlot {
+      padding-right: 1cm;
+    }
+  }
+  
