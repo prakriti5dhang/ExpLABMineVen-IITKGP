@@ -11,16 +11,38 @@ var rows,x;
 
  var counttbl=0;
  var dispcnttbl;
+ var canvas,c1,c2,c3;
+ var ctx, ctx1, ctx2, ctx3;
 
 function addresult(){
  
 counttbl++;
 dispcnttbl=counttbl;
 
+   canvas = document.getElementById("myCanvas");
+    ctx = canvas.getContext("2d");
+
+    c1 = document.getElementById("myCanvas1");
+    ctx1 = c1.getContext("2d");
+
+    c2 = document.getElementById("myCanvas2");
+    ctx2 = c2.getContext("2d");
+
+    c3 = document.getElementById("myCanvas3");
+    ctx3 = c3.getContext("2d");
+
  if(dispcnttbl==1){
     document.getElementById("obvtable5").style.display="block";
       var tabrowindex=0;
  otable= document.getElementById('obtable5');
+ cancelAnimationFrame(cancelani);
+ cancelAnimationFrame(cancelani1);
+ cancelAnimationFrame(cancelani2);
+ cancelAnimationFrame(cancelani3);
+    ctx.clearRect(0,0,38, 40);
+    ctx1.clearRect(0,0,38, 40);
+    ctx2.clearRect(0,0,19, 20);
+    ctx3.clearRect(0,0,19, 20);
  
  arr[0] =avgv;
  arr[1] =stpr;
@@ -59,6 +81,9 @@ var row = otable.insertRow(++tabrowindex); // Row increment
     document.getElementById("flwdevice").style.display="block";
     document.getElementById('obbtn').disabled=true; /*observation button disabled */
     document.getElementById('yfldb').disabled=false;
+    
+    
+    
 }
 
 
@@ -66,6 +91,14 @@ else if(dispcnttbl==2){
     document.getElementById("obvtable5").style.display="block";
       var tabrowindex=1;
  otable= document.getElementById('obtable5');
+ cancelAnimationFrame(cancelani);
+ cancelAnimationFrame(cancelani1);
+ cancelAnimationFrame(cancelani2);
+ cancelAnimationFrame(cancelani3);
+    ctx.clearRect(0,0,38, 40);
+    ctx1.clearRect(0,0,38, 40);
+    ctx2.clearRect(0,0,19, 20);
+    ctx3.clearRect(0,0,19, 20);
  
  arr[0] =avgv;
  arr[1] =stpr;
@@ -76,6 +109,8 @@ else if(dispcnttbl==2){
  arr[6] =qnt;
  arr[7] = aopt;
  arr[8]= effid;
+
+ 
  
  tabrowindex + 1;
 
@@ -104,6 +139,7 @@ var row = otable.insertRow(++tabrowindex); // Row increment
     document.getElementById("flwdevice").style.display="block";
     document.getElementById('obbtn').disabled=true; /*observation button disabled */
     document.getElementById('yfldb').disabled=false;
+    
 }
 
 
@@ -111,6 +147,14 @@ else if(dispcnttbl==3){
     document.getElementById("obvtable5").style.display="block";
       var tabrowindex=2;
  otable= document.getElementById('obtable5');
+ cancelAnimationFrame(cancelani);
+ cancelAnimationFrame(cancelani1);
+ cancelAnimationFrame(cancelani2);
+ cancelAnimationFrame(cancelani3);
+    ctx.clearRect(0,0,38, 40);
+    ctx1.clearRect(0,0,38, 40);
+    ctx2.clearRect(0,0,19, 20);
+    ctx3.clearRect(0,0,19, 20);
  
  arr[0] =avgv;
  arr[1] =stpr;
@@ -149,12 +193,21 @@ var row = otable.insertRow(++tabrowindex); // Row increment
     document.getElementById("flwdevice").style.display="block";
     document.getElementById('obbtn').disabled=true; /*observation button disabled */
     document.getElementById('yfldb').disabled=false;
+   
 }
  
 else if(dispcnttbl==4){
     document.getElementById("obvtable5").style.display="block";
       var tabrowindex=3;
  otable= document.getElementById('obtable5');
+ cancelAnimationFrame(cancelani);
+ cancelAnimationFrame(cancelani1);
+ cancelAnimationFrame(cancelani2);
+ cancelAnimationFrame(cancelani3);
+    ctx.clearRect(0,0,38, 40);
+    ctx1.clearRect(0,0,38, 40);
+    ctx2.clearRect(0,0,19, 20);
+    ctx3.clearRect(0,0,19, 20);
  
  arr[0] =avgv;
  arr[1] =stpr;
@@ -193,12 +246,21 @@ var row = otable.insertRow(++tabrowindex); // Row increment
     document.getElementById("flwdevice").style.display="block";
     document.getElementById('obbtn').disabled=true; /*observation button disabled */
     document.getElementById('yfldb').disabled=false;
+    
 }
    
 else if(dispcnttbl==5){
     document.getElementById("obvtable5").style.display="block";
       var tabrowindex=4;
  otable= document.getElementById('obtable5');
+ cancelAnimationFrame(cancelani);
+ cancelAnimationFrame(cancelani1);
+ cancelAnimationFrame(cancelani2);
+ cancelAnimationFrame(cancelani3);
+    ctx.clearRect(0,0,38, 40);
+    ctx1.clearRect(0,0,38, 40);
+    ctx2.clearRect(0,0,19, 20);
+    ctx3.clearRect(0,0,19, 20);
  
  arr[0] =avgv;
  arr[1] =stpr;

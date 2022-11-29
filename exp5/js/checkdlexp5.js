@@ -16,8 +16,7 @@ function checkm(){
   document.getElementById('len').readOnly=true;
  }
 
-else if(diad=="" && lend ==""){
-    document.getElementById("checkobsn").style.display = "block";
+else if(diad == " " && lend  == " "){
       document.getElementById("checkobsn").classList.add("show");
       document.getElementById("alertmsg").innerHTML="You cannot keep empty. Enter diameter value between 0.50 and 0.55; length value between 4.00 and 4.20";
 }
@@ -29,6 +28,7 @@ else if(diad==""){
 }
 
 else if(lend==""){
+  document.getElementById("obsanem").style.display="none";
     document.getElementById("checkobsn").style.display = "block";
       document.getElementById("checkobsn").classList.add("show");
       document.getElementById("alertmsg").innerHTML="You cannot keep empty. Enter duct's length value between 4.00 and 4.20";
@@ -36,6 +36,7 @@ else if(lend==""){
 
  else if(diad<=0.50){
     document.getElementById("checkobsn").style.display = "block";
+    
     document.getElementById("checkobsn").classList.add("show");
     document.getElementById("alertmsg").innerHTML="Enter duct's diameter should be greater than 0.50";
 }

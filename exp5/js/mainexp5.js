@@ -29,7 +29,9 @@ var goUp = true;
 var goDown = false;
 var moveanemometerstick;
 
-var cancelani, cancelani1;
+var cancelani, cancelani1, cancelani2, cancelani3;
+var canvas, canvas1, canvas2, canvas3;
+var ctx, ctx1, ctx2, ctx3;
 
 function pgload(){
   document.getElementById("on").style.visibility="hidden";
@@ -512,7 +514,7 @@ document.getElementById("effb").disabled=true;
 }
   }
 
-
+/* flow control devices */
   function yesflwdevice(){
     
     countfld++;
@@ -526,7 +528,7 @@ document.getElementById("effb").disabled=true;
     document.getElementById("measureddata").style.display="none";
     document.getElementById("effdatad").style.display="none";
     document.getElementById("flwdevice").style.display="none";
-
+    
 
     }
 
