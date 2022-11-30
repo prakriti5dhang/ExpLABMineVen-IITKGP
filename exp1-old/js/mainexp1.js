@@ -13,11 +13,9 @@ function showpanel(){
     document.getElementById('btninst').disabled=false;
     document.getElementById('obsno').style.display="block";
     document.getElementById('prrel').style.display="none";
-    document.getElementById('yesbtn').disabled=true;
     $("#btninst").fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300);
-    
+    document.getElementById('yesbtn').disabled=true;
 }
-
 
 function exitexp(){
    window.close();

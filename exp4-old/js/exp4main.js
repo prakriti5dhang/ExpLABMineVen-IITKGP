@@ -46,11 +46,11 @@ function instbtndispn(){
 function moveplate1(){  /* move 1st  throtling plate to the required position*/
 
   var iplate1 = document.getElementById("plate1");   
-  var orgbtm = -130; /* initial position */
+  var orgbtm = 10; /* initial position */
   clearInterval(imgobj1);
   imgobj1 = setInterval(frame, 5); /* frame is 5 denotes the speed of the movement*/
   function frame() {
-    if (orgbtm == 0) { /* moves to 167 bottom positon*/
+    if (orgbtm == 167) { /* moves to 167 bottom positon*/
       clearInterval(imgobj1); /* stops to 167 postion*/
       document.getElementById('utnanometer').style.display="none";
   document.getElementById('utnanometer1').style.display="block";
@@ -61,7 +61,7 @@ function moveplate1(){  /* move 1st  throtling plate to the required position*/
   document.getElementById('anmbtn').disabled=false;
     } else {
       orgbtm++; 
-      iplate1.style.bottom = orgbtm + '%'; 
+      iplate1.style.bottom = orgbtm + 'px'; 
        
     }
   }
@@ -74,11 +74,11 @@ function moveplate1(){  /* move 1st  throtling plate to the required position*/
 
 function moveplate2(){ /* move 2nd throtling plate to the required position*/
    var iplate2 = document.getElementById("plate2");   
-  var orgbtm2 = -130;
+  var orgbtm2 = 10;
   clearInterval(imgobj2);
   imgobj2 = setInterval(frame, 5);
   function frame() {
-    if (orgbtm2 == 0) {
+    if (orgbtm2 == 167) {
       clearInterval(imgobj2);
       document.getElementById('utnanometer2').style.display="block";
       document.getElementById('utnanometer1').style.display="none";
@@ -89,7 +89,7 @@ function moveplate2(){ /* move 2nd throtling plate to the required position*/
       document.getElementById('anmbtn').disabled=false;
     } else {
       orgbtm2++; 
-      iplate2.style.bottom = orgbtm2 + '%'; 
+      iplate2.style.bottom = orgbtm2 + 'px'; 
        
     }
   }
@@ -100,11 +100,11 @@ function moveplate2(){ /* move 2nd throtling plate to the required position*/
 
   function moveplate3(){ /* move 3rd throtling plate to the required position*/
    var iplate3 = document.getElementById("plate3");   
-   var orgbtm3 = -130;
+   var orgbtm3 = 10;
    clearInterval(imgobj3);
    imgobj3 = setInterval(frame, 5);
    function frame() {
-     if (orgbtm3 == 0) {
+     if (orgbtm3 == 167) {
        clearInterval(imgobj3);
        document.getElementById('utnanometer1').style.display="none";
        document.getElementById('utnanometer2').style.display="none";
@@ -115,7 +115,7 @@ function moveplate2(){ /* move 2nd throtling plate to the required position*/
        document.getElementById('anmbtn').disabled=false;
      } else {
        orgbtm3++; 
-       iplate3.style.bottom = orgbtm3 + '%'; 
+       iplate3.style.bottom = orgbtm3 + 'px'; 
         
      }
    }
@@ -124,11 +124,11 @@ function moveplate2(){ /* move 2nd throtling plate to the required position*/
   }
   function moveplate4(){ /* move 4th throtling plate to the required position*/
    var iplate4 = document.getElementById("plate4");   
-   var orgbtm4 = -130;
+   var orgbtm4 = 10;
    clearInterval(imgobj4);
    imgobj4 = setInterval(frame, 5);
    function frame() {
-     if (orgbtm4 == 0) {
+     if (orgbtm4 == 167) {
        clearInterval(imgobj4);
        document.getElementById('utnanometer1').style.display="none";
   document.getElementById('utnanometer2').style.display="none";
@@ -139,7 +139,7 @@ function moveplate2(){ /* move 2nd throtling plate to the required position*/
   document.getElementById('anmbtn').disabled=false;
      } else {
        orgbtm4++; 
-       iplate4.style.bottom = orgbtm4 + '%'; 
+       iplate4.style.bottom = orgbtm4 + 'px'; 
         
      }
    }
@@ -149,11 +149,11 @@ function moveplate2(){ /* move 2nd throtling plate to the required position*/
 
   function moveplate5(){ /* move 5th throtling plate to the required position*/
    var iplate5 = document.getElementById("plate5");   
-   var orgbtm5 = -130;
+   var orgbtm5 = 10;
    clearInterval(imgobj5);
    imgobj5 = setInterval(frame, 5);
    function frame() {
-     if (orgbtm5 == 0) {
+     if (orgbtm5 == 167) {
        clearInterval(imgobj5);
        document.getElementById('utnanometer1').style.display="none";
   document.getElementById('utnanometer2').style.display="none";
@@ -164,7 +164,7 @@ function moveplate2(){ /* move 2nd throtling plate to the required position*/
   document.getElementById('anmbtn').disabled=false;
      } else {
        orgbtm5++; 
-       iplate5.style.bottom = orgbtm5 + '%'; 
+       iplate5.style.bottom = orgbtm5 + 'px'; 
         
      }
    }
@@ -375,7 +375,7 @@ function veloread(){  /* get the velocity reading*/
       document.getElementById('velread').innerHTML='3rd Velocity Reading';
       
       //document.getElementById('user').style.display="none";
-      document.getElementById('anemometerr').style.display="none";/* display anemometer*/
+      document.getElementById('anemometerr').style.display="block";/* display anemometer*/
       clearInterval(moveanemometerstick);
       
       
@@ -401,8 +401,8 @@ function veloread(){  /* get the velocity reading*/
       document.getElementById('measurebtn').disabled=false;/*button for click to measure is enabled*/
       document.getElementById("velread").disabled=true;/*button for velread is disabled*/
       document.getElementById('velread').innerHTML='3rd Velocity Reading';
-      document.getElementById('user').style.display="none";
-      document.getElementById('anemometerr').style.display="none";/* display anemometer*/
+      //document.getElementById('user').style.display="none";
+      document.getElementById('anemometerr').style.display="block";/* display anemometer*/
       clearInterval(moveanemometerstick);
    }
    /*  3rd plate velocity readings */
@@ -424,8 +424,8 @@ function veloread(){  /* get the velocity reading*/
       document.getElementById('measurebtn').disabled=false;/*button for click to measure is enabled*/
       document.getElementById("velread").disabled=true; /*button for velread is disabled*/
       document.getElementById('velread').innerHTML='3rd Velocity Reading';
-      document.getElementById('user').style.display="none";
-      document.getElementById('anemometerr').style.display="none";/* display anemometer*/
+      //document.getElementById('user').style.display="none";
+      document.getElementById('anemometerr').style.display="block";/* display anemometer*/
       clearInterval(moveanemometerstick);
    }
 /*  4th plate velocity readings */
@@ -447,8 +447,8 @@ function veloread(){  /* get the velocity reading*/
       document.getElementById('measurebtn').disabled=false;/*button for click to measure is enabled*/
       document.getElementById("velread").disabled=true; /*button for velread is disabled*/
       document.getElementById('velread').innerHTML='3rd Velocity Reading';
-      document.getElementById('user').style.display="none";
-      document.getElementById('anemometerr').style.display="none";/* display anemometer*/
+      //document.getElementById('user').style.display="none";
+      document.getElementById('anemometerr').style.display="block";/* display anemometer*/
       clearInterval(moveanemometerstick);
    }
 /*  5th plate velocity readings */
@@ -573,8 +573,8 @@ function caloutput(){
 
  /* moves the anemometer to left- right and top-bottom direction */
 
-   var bottom = -60; /* initial positon */
-	var left = 100; /*initial position */
+   var bottom = 120; /* initial positon */
+	var left = 390; /*initial position */
 	var temp = bottom;
 	var temp1 = left;
 	var goUp = true;
@@ -591,30 +591,30 @@ function moveanemometer(){
       
       function moveanmetr(){ 
 		
-		/*if(goRight) {
+		if(goRight) {
 			temp1++;
-			if(temp1 == 99) { /* move right*/
-				//goRight = false;
-				//goLeft = true;
-			//}
-		//} else if(goLeft) {
-			//temp1--;
-			//if(temp1 == 102) { /* move left */
-			//	goLeft = false;
-			//	goRight = true;
-			//}
-      //}
-		//$("#anemometerr").css("left",temp1);
+			if(temp1 == 395) { /* move right*/
+				goRight = false;
+				goLeft = true;
+			}
+		} else if(goLeft) {
+			temp1--;
+			if(temp1 == 385) { /* move left */
+				goLeft = false;
+				goRight = true;
+			}
+		}
+		$("#anemometerr").css("left",temp1);
 
       if(goUp) {
-			temp++;
-			if(temp == -20) {
+			temp--;
+			if(temp == 100) {
 				goUp = false;
 				goDown = true;
 			}
 		} else if(goDown) {
-			temp--;
-			if(temp == -60) {
+			temp++;
+			if(temp == 138) {
 				goDown = false;
 				goUp = true;
 			}

@@ -11,13 +11,17 @@ ol{
    font-size: 14px; 
 }
 
-
+.img-container{
+   display: inline-block;
+   position: relative;
+ }
 
 /*  Throtling plate 1 */
 #plate1 {
     position: absolute;
-    left: 20px;
-    bottom: 10px;
+    left: 0%;
+    bottom: -130%;
+    width:12.5%;
     animation: tplate1 10s linear;
    /* margin-left: 50% !important;*/
   }
@@ -25,97 +29,110 @@ ol{
  /*  Throtling plate 2 */
   #plate2 {
     position: absolute;
-    left: 20px;
-    bottom: 10px;
+    left: 0%;
+    bottom: -130%;
+    width:12.5%;
    
   }
   /*  Throtling plate 3 */
   #plate3 {
     position: absolute;
-    left: 20px;
-    bottom: 10px;
+    left: 0%;
+    bottom: -130%;
+    width:12.5%;
   }
 
   /*  Throtling plate 4 */
   #plate4 {
     position: absolute;
-    left: 20px;
-    bottom: 10px;
+    left: 0%;
+    bottom: -130%;
+    width:12.5%;
    
   }
   /*  Throtling plate 5 */
   #plate5 {
    position: absolute;
-   left: 20px;
-   bottom: 10px;
+   left: 0%;
+    bottom: -130%;
+    width:12.5%;
  }
  
 
  /* Anemometer positon */
  #anemometerr{
     position: absolute;
-    bottom: 120px;  /*  top 150px*/
-    left: 390px; /* right:230 px */
+    bottom: -60%;  
+    left: 100%; 
+    width:6%;
     
  }
 
  /*User postion */
  #user{
     position: absolute;
-    left: 360px; /* right: 245 px */
-    bottom:80px; /* top: 200 px */
+    bottom: -55%;  
+    left: 94%; 
+    width:10%;
     
  }
  /* Tube nanometer positon */
  #utnanometer{
    position: absolute;
-   left: 200px; 
-   bottom:-5px; 
+   left: 42.6%; 
+   bottom: -136%; 
+   width: 25%;
    
 }
  #utnanometer1{
    position: absolute;
-   left: 200px; 
-   bottom:-5px; 
+   left: 42.6%; 
+   bottom: -136%; 
+   width: 25%;
    
 }
 #utnanometer2{
    position: absolute;
-   left: 200px; 
-   bottom:-5px; 
-   
+   left: 42.6%; 
+   bottom: -136%; 
+   width: 25%;
 }
 #utnanometer3{
    position: absolute;
-   left: 200px; 
-   bottom:-5px; 
+   left: 42.6%; 
+   bottom: -136%; 
+   width: 25%;
    
 }
 #utnanometer4{
    position: absolute;
-   left: 200px; 
-   bottom:-5px; 
+   left: 42.6%; 
+   bottom: -136%; 
+   width: 25%;
    
 }
 #utnanometer5{
    position: absolute;
-   left: 200px; 
-   bottom:-5px; 
+   left: 42.6%; 
+   bottom: -136%; 
+   width: 25%;
    
 }
 
 /* 1st tube positon */
 #tubelinesn{
    position: absolute;
-   left: 129px; 
-   bottom:100px; 
+   left: 28%; 
+   bottom: -39%; 
+   width: 36%;
 }
 
 /* 2nd tube positon */
 #tubelinesn2{
    position: absolute;
-   left: 168px; 
-   bottom:100px; 
+   left: 37%; 
+   bottom: -35%; 
+   width: 14.5%;  
 }
 
 /* chart js hide header and footer */
@@ -144,61 +161,3 @@ ol{
    }
  }
 
-/*#btnobv{
-         border: 1px transparent;
-        color: #eeeeee;
-        display: inline-block;
-        text-align: center;
-        text-decoration: none;
-        -webkit-animation: glowing 1300ms infinite;
-        -moz-animation: glowing 1300ms infinite;
-        -o-animation: glowing 1300ms infinite;
-        animation: glowing 1300ms infinite;
-}
-
-@-webkit-keyframes glowing {
-   0% {
-     background-color: #0091b2;
-     -webkit-box-shadow: 0 0 3px #0091b2;
-   }
-   50% {
-     background-color: #21c7ed;
-     -webkit-box-shadow: 0 0 15px #21c7ed;
-   }
-   100% {
-     background-color: #0091b2;
-     -webkit-box-shadow: 0 0 3px #0091b2;
-   }
- }*/
-
- /*.mag {
-   width:200px;
-   margin: 0 auto;
-   float: none;
-}
-   
-.mag img {
-   max-width: 100%;
-}
-       
- 
-
-.magnify {
-   position: relative;
-   cursor: none
-}
-
-.magnify-large {
-   position: absolute;
-   display: none;
-   width: 175px;
-   height: 175px;
-
-   -webkit-box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
-      -moz-box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
-           box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
-   
-   -webkit-border-radius: 100%;
-      -moz-border-radius: 100%;
-            border-radius: 100%
-}*/

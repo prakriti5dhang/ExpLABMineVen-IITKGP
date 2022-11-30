@@ -1,0 +1,204 @@
+/* Lab:exp_4_Calibration of orifice plates
+	 File name: main.css
+   Author:Prakriti Dhang
+*/
+
+table,th,td{
+    text-align: center;
+}
+
+ol{
+   font-size: 14px; 
+}
+
+
+
+/*  Throtling plate 1 */
+#plate1 {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    animation: tplate1 10s linear;
+   /* margin-left: 50% !important;*/
+  }
+
+ /*  Throtling plate 2 */
+  #plate2 {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+   
+  }
+  /*  Throtling plate 3 */
+  #plate3 {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+  }
+
+  /*  Throtling plate 4 */
+  #plate4 {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+   
+  }
+  /*  Throtling plate 5 */
+  #plate5 {
+   position: absolute;
+   left: 20px;
+   bottom: 10px;
+ }
+ 
+
+ /* Anemometer positon */
+ #anemometerr{
+    position: absolute;
+    bottom: 120px;  /*  top 150px*/
+    left: 390px; /* right:230 px */
+    
+ }
+
+ /*User postion */
+ #user{
+    position: absolute;
+    left: 360px; /* right: 245 px */
+    bottom:80px; /* top: 200 px */
+    
+ }
+ /* Tube nanometer positon */
+ #utnanometer{
+   position: absolute;
+   left: 200px; 
+   bottom:-5px; 
+   
+}
+ #utnanometer1{
+   position: absolute;
+   left: 200px; 
+   bottom:-5px; 
+   
+}
+#utnanometer2{
+   position: absolute;
+   left: 200px; 
+   bottom:-5px; 
+   
+}
+#utnanometer3{
+   position: absolute;
+   left: 200px; 
+   bottom:-5px; 
+   
+}
+#utnanometer4{
+   position: absolute;
+   left: 200px; 
+   bottom:-5px; 
+   
+}
+#utnanometer5{
+   position: absolute;
+   left: 200px; 
+   bottom:-5px; 
+   
+}
+
+/* 1st tube positon */
+#tubelinesn{
+   position: absolute;
+   left: 129px; 
+   bottom:100px; 
+}
+
+/* 2nd tube positon */
+#tubelinesn2{
+   position: absolute;
+   left: 168px; 
+   bottom:100px; 
+}
+
+/* chart js hide header and footer */
+@media print {
+   body {-webkit-print-color-adjust: exact !important;}
+   }
+   @page {
+      margin: 1in; 
+    }
+
+   @print {
+      @page :footer {
+         display: none
+         :disabled:true
+          
+      }
+    
+      @page :header {
+         display: none
+          :disabled:true
+      }
+  }
+  @media print {
+   #myChartexp4 {
+     padding-right: 1cm;
+   }
+ }
+
+/*#btnobv{
+         border: 1px transparent;
+        color: #eeeeee;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        -webkit-animation: glowing 1300ms infinite;
+        -moz-animation: glowing 1300ms infinite;
+        -o-animation: glowing 1300ms infinite;
+        animation: glowing 1300ms infinite;
+}
+
+@-webkit-keyframes glowing {
+   0% {
+     background-color: #0091b2;
+     -webkit-box-shadow: 0 0 3px #0091b2;
+   }
+   50% {
+     background-color: #21c7ed;
+     -webkit-box-shadow: 0 0 15px #21c7ed;
+   }
+   100% {
+     background-color: #0091b2;
+     -webkit-box-shadow: 0 0 3px #0091b2;
+   }
+ }*/
+
+ /*.mag {
+   width:200px;
+   margin: 0 auto;
+   float: none;
+}
+   
+.mag img {
+   max-width: 100%;
+}
+       
+ 
+
+.magnify {
+   position: relative;
+   cursor: none
+}
+
+.magnify-large {
+   position: absolute;
+   display: none;
+   width: 175px;
+   height: 175px;
+
+   -webkit-box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+           box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+   
+   -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+            border-radius: 100%
+}*/

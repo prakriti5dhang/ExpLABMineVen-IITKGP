@@ -34,8 +34,8 @@ var canvas, canvas1, canvas2, canvas3;
 var ctx, ctx1, ctx2, ctx3;
 
 function pgload(){
-  //document.getElementById("on").style.visibility="hidden";
-  //document.getElementById("off").style.visibility="hidden"; 
+  document.getElementById("on").style.visibility="hidden";
+  document.getElementById("off").style.visibility="hidden"; 
  
 }
 

@@ -62,7 +62,7 @@
 <body class="d-flex flex-column min-vh-100" style="background-color: rgb(3, 44, 83);" onload="pgload();">
   <header id="header">
     <div class="container-fluid">
-        <img src="../exp1/images/logo.jpg" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 rounded img-fluid img-resposive" alt="logo" >
+        <img src="../exp1/images/logo.jpg" class="rounded img-fluid img-resposive" alt="logo" >
     </div>
   </header>
     
@@ -81,17 +81,19 @@
         <div class="card-body" style="background-color:rgb(255, 235, 254);">
           <h4 class="card-title">Machine set up</h4>
           <p class="card-text"></p>
-          <div class="img-container">
-          <img id ="askimg" src="../exp1/images/tube_nanometerc.PNG" class=" img-fluid" alt="tube_nanometer">
-          <div id="prrel" data-toggle="modal" data-target="#prschng" class="img-fluid" style="cursor: pointer;" data-toggle="tooltip" data-placement="top"  title="Change Pressure"></div>
-         <div id ="lbeaker"> <img src="../exp1/images/beaker.png"  class=" img-fluid" alt="beaker"></div>
-         <div id="askaninam" > 
+          <img id ="askimg" src="../exp1/images/tube_nanometerc.PNG" class=" img-resposive" alt="tube_nanometer">
+          <div id="prrel" data-toggle="modal" data-target="#prschng" style="cursor: pointer;" data-toggle="tooltip" data-placement="top"  title="Change Pressure"></div>
+         <div id ="lbeaker"> <img src="../exp1/images/beaker.png"  class=" img-resposive" alt="beaker"></div>
+         <div id="askaninam"> <!--img src="../exp1/images/askaniam.png"  class="  img-resposive" alt="askaniam" data-toggle="tooltip" data-placement="top"  title="Askania Minimeter"-->
           <canvas id="myCanvasa" width="15" height="88" style="border:1px solid #0a0a0a;"></canvas></div>
-          
-          <div ><img src="../exp1/images/tubeminimeter.png" id="inclm"  class="img-fluid" alt="tubeminimetre" data-toggle="tooltip" data-placement="top"  title="Inclined Manometer"></div>
-           <canvas id="myCanvas"  width="5" height="180" style="border:1px solid #0a0a0a;"></canvas>
+          <!--div id="askaniamorg" data-toggle="tooltip" data-placement="top"  title="Askania Minimeter"></div>
+          <div id="askaniamorgwh" data-toggle="tooltip" data-placement="top"  title="Askania Minimeter"></div-->
+          <!--img id="scaleask" src="../exp1/images/scaleask.png"  class=" img-resposive" alt="scaleask"-->
+          <div id="inclm"><img src="../exp1/images/tubeminimeter.png"  class="img-resposive" alt="tubeminimetre" data-toggle="tooltip" data-placement="top"  title="Inclined Manometer"></div>
+            <!--div id="inclred"></div-->
+            <!--div id="inclredwh"></div--><canvas id="myCanvas" width="5" height="180" style="border:1px solid #0a0a0a;"></canvas>
             
-           </div>
+          <!--div class="img-magnifier-glass"></div-->
 			    
         </div>
       </div>
@@ -105,7 +107,7 @@
                <button type="button" class="btn btn-success  float-right col-3 col-sm-3 col-xs-3 col-lg-3" onclick="window.print()">Print</button>
 
                <!--canvas id="myChart" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></canvas-->
-               <div id="myPlot"  class="responsive-plot" style="height:400px;"></div>
+               <div id="myPlot"  style="height:400px;"></div>
              </div>
            </div>
         </div>
@@ -116,7 +118,7 @@
         <div class="card-body" style="background-color:rgb(251, 255, 214);">
           <h4 class="card-title">Control Elements</h4>
           <p class="card-text" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Are you ready with the experiment?</p>
-            <button type="button" id="yesbtn" class="btn btn-primary col-md-3 col-sm-3 col-xs-3 col-lg-3"  data-toggle="modal" data-target="#rotatephone"onclick="yesbtncl()" >Yes</button>
+            <button type="button" id="yesbtn" class="btn btn-primary col-md-3 col-sm-3 col-xs-3 col-lg-3"  data-toggle="modal" data-target="#rotatephone" >Yes</button>
             <button type="button" id="nobtn" class="btn btn-warning col-md-3 col-sm-3 col-xs-3 col-lg-3" data-toggle="modal" data-target="#cancelexp" >No</button>
             <button type="button" id="btninst" class="btn btn-success float-right col-md-3 col-sm-3 col-xs-3 col-lg-3" data-toggle="collapse" data-target="#instdisp1" disabled>Instruction</button>
 </div></div>

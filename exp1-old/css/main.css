@@ -10,54 +10,25 @@ input::-webkit-inner-spin-button {
 table,th,td{
     text-align: center;
 }
-.img-container{
-    display: inline-block;
-    position: relative;
-  }
 
-/*#askaninam{
+#askaninam{
 position: absolute;
-left: 34%;
-top: 20%;
-width: 15%;
-height: 20%;
-}*/
-
-#myCanvas{
-    position: absolute;
-    left: 78.2%;
-    top: 14%;
-    width: 1%;
-   height: 64%;
-    transform: rotate(45deg) ;
-    }
-
-#myCanvasa{
-    position: absolute;
-left: 34%;
-top: 20%;
-width: 3%;
-height: 29%;
+left: 215px;
+top: 125px;
 }
-
-
-
 
 #inclm{
     position: absolute;
-    left: 63%;
-    top: 32%;
-    width: 31%;
-   height: 28%;
+    left: 375px;
+    top: 169px;
     -webkit-transform: rotate(-19deg);
     transform: rotate(-19deg);
 }
 
 #lbeaker{
  position: absolute;
- top: 37%;
- left: 1%;
- width: 15%;
+ top: 180px;
+ left: 25px;
 
 }
 
@@ -68,14 +39,74 @@ left: 230px;
 top: 125px;
 
 }
+/*#inclred
+{
+position: absolute;
+left:468px;
+top: 120px;
+width: 5px;
+height: 185px;
+display: block;
+background: rgb(255, 8, 0);
+/*-webkit-transform: rotate(45deg) ;*/
+    /*transform: rotate(45deg) ;
+/*}
+#inclredwh{
+position: absolute;
+left:474px; /*++*/
+/*top: 121px; /* --*/
+/*width: 5px;
+height: 170px;
+display: block;
+background: rgb(255, 253, 253);
+/*-webkit-transform: rotate(45deg) ;*/
+    /*transform: rotate(45deg) ;
+}*/
+#myCanvas{
+    position: absolute;
+    left:468px;
+    top: 121px;
+    transform: rotate(45deg) ;
+    }
+
+    #myCanvasa{
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        /*transform: rotate(45deg) ;*/
+        }
+
+
+/*#askaniamorg{
+
+width: 20px;
+height: 80px;
+position: absolute;
+left: 215px;
+top:125px;
+background: rgba(255, 136, 0, 0.925);
+
+}
+
+
+#askaniamorgwh{
+
+    width: 20px;
+    height: 78px;
+    position: absolute;
+    left: 215px;
+    top:125px;
+    background: rgb(240, 236, 236);
+    }*/
+
 
 
     #prrel{
-        width: 2%;
-        height: 3%;
+        width: 10px;
+        height: 10px;
         position: absolute;
-        left:9%;
-        top:26%;
+        left: 70px;
+        top:145px;
         background: rgb(24, 23, 23);
         }
 
