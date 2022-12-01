@@ -1,0 +1,306 @@
+/* Lab:exp_9_Precise Traversing in a Duct using Pitot Tube
+	 File name: main.css
+   Author:Prakriti Dhang
+*/
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+table,th,td{
+    text-align: center;
+}
+
+.img-container{
+    display:inline-block;
+    position: relative;
+  }
+  
+  .poscol{
+    width: 100%;
+    min-width: 23px;
+    min-height: 1px;
+    }
+    
+    .poscol img{
+      max-width: 100%;
+      height: auto;
+    }
+
+    #ductimg{
+        position: relative;
+        top:0%;
+        left:0%;
+        width:100%;
+      
+    }
+
+#measurept{
+    position: absolute;
+    top: 250%;
+    left:0%;
+    width:30%;
+}
+
+#pitot_tube{
+    position: absolute;
+    top:50%;
+    left:38.5%; 
+    width:12%;
+}
+
+#connect1{
+    position: absolute;
+    top:130%;
+    left:44%;
+    width:65%;
+}
+
+#connect2{
+    position: absolute;
+    top:130%;
+    left:28%;
+    width:40%;
+    transform: rotate(18deg);
+    }
+#connect3{
+    position: absolute;
+    top:245%;
+    left:48%;
+    width:25%;
+    transform: rotate(1deg);
+}
+#pressurebox{
+    position: absolute;
+    top:260%;
+    left:55%;
+    width:10%;
+}
+
+#scale{
+    position: absolute;
+    top:245%;
+    left:64%;
+    width:50%;
+    height:24%;
+    transform: rotate(-40deg);
+
+}
+
+
+
+#myCanvas{
+    position: absolute;
+    top: 139%;
+    left:86%;
+    width:2%;
+    height:215%;
+    transform: rotate(50deg) ;
+    }
+
+
+    
+
+
+    
+
+    #r1{
+        position: absolute;
+        top: 315%;
+        left:0.5%;
+        width:0%;
+        height: 40%;
+    border-radius: 80%;
+    background-color: red;
+    }
+    #tr1{
+    position: absolute;
+    top: 350%;
+    left:0.2%;
+    font-size: small;
+    font-weight: bold;
+    }
+
+    #r2{
+        position: absolute;
+    top:72px;
+    left:500px;
+    border-radius: 80%;
+    background-color: red;
+    }
+    #tr2{
+        position: absolute;
+        top:132px;
+        left:490px;
+        font-size: small;
+        font-weight: bold;
+
+        }
+    #r3{
+    position: absolute;
+    top:72px;
+    left:515px;
+    border-radius: 80%;
+    background-color: red;
+    }
+    #tr3{
+        position: absolute;
+        top:150px;
+        left:510px;
+        font-size: small;
+        font-weight: bold;
+
+        }
+
+    #r4{
+        position: absolute;
+    top:72px;
+    left:530px;
+    border-radius: 80%;
+    background-color: red;
+    }
+    #tr4{
+        position: absolute;
+        top:170px;
+        left:520px;
+        font-size: small;
+        font-weight: bold;
+
+        }
+
+    #r5{
+        position: absolute;
+    top:72px;
+    left:545px;
+    border-radius: 80%;
+    background-color: red;
+    }
+    #tr5{
+        position: absolute;
+        top:190px;
+        left:538px;
+        font-size: small;
+        font-weight: bold;
+
+        }
+    #r6{
+        position: absolute;
+    top:72px;
+    left:552px;
+    border-radius: 80%;
+    background-color: red;
+    }
+    #tr6{
+        position: absolute;
+        top:210px;
+        left:545px;
+        font-size: small;
+        font-weight: bold;
+
+        }
+    #r7{
+        position: absolute;
+    top:72px;
+    left:559px;
+    border-radius: 80%;
+    background-color: red;
+    }
+    #tr7{
+        position: absolute;
+        top:190px;
+        left:557px;
+        font-size: small;
+        font-weight: bold;
+
+        }
+
+    #r8{
+    position: absolute;
+    top:72px;
+    left:574px;
+    border-radius: 80%;
+    background-color: red;
+    }
+    #tr8{
+        position: absolute;
+        top:170px;
+        left:574px;
+        font-size: small;
+        font-weight: bold;
+
+        }
+    #r9{
+        position: absolute;
+    top:72px;
+    left:588px;
+    border-radius: 80%;
+    background-color: red;
+    }
+    #tr9{
+        position: absolute;
+        top:150px;
+        left:585px;
+        font-size: small;
+        font-weight: bold;
+
+        }
+    #r10{
+        position: absolute;
+    top:72px;
+    left:604px;
+    border-radius: 80%;
+    background-color: red;
+    }
+    #tr10{
+        position: absolute;
+        top:132px;
+        left:591px;
+        font-size: small;
+        font-weight: bold;
+
+        }
+    #r11{
+        position: absolute;
+    top:73px;
+    left:613px;
+    border-radius: 80%;
+    background-color: red;
+    }
+    #tr11{
+        position: absolute;
+        top:114px;
+        left:610px;
+        font-size: small;
+        font-weight: bold;
+
+        }
+        @media print {
+            body {-webkit-print-color-adjust: exact !important;
+               
+                
+            }
+            }
+            @page {
+                margin: 1in; 
+              }
+              
+            @print {
+               @page :footer {
+                  display: none;
+                  
+                   
+               }
+             
+               @page :header {
+                  display: none;
+                  
+               }
+           }
+           @media print {
+            #myPlot9 {
+              padding-right: 1cm;
+            }
+          }
