@@ -75,9 +75,33 @@ var row = otable.insertRow(++tabrowindex); // Row increment
          
         }
     }
-   
-  
+                                             
+    document.getElementById('r11').style.display="none";
+    document.getElementById('tr11').style.display="none";
   document.getElementById('graphd').display=block;
+
+/*document.getElementById('r1').style.display="block";
+document.getElementById('tr1').style.display="block";
+document.getElementById('r2').style.display="block";
+document.getElementById('tr2').style.display="block";
+document.getElementById('r3').style.display="block";
+document.getElementById('tr3').style.display="block";
+document.getElementById('r4').style.display="block";
+document.getElementById('tr4').style.display="block";
+document.getElementById('r5').style.display="block";
+document.getElementById('tr5').style.display="none";
+document.getElementById('r61').style.display="block";
+document.getElementById('tr6').style.display="block";
+document.getElementById('r7').style.display="block";
+document.getElementById('tr7').style.display="block";
+document.getElementById('r8').style.display="block";
+document.getElementById('tr8').style.display="block";
+document.getElementById('r9').style.display="block";
+document.getElementById('tr9').style.display="block";
+document.getElementById('r10').style.display="block";
+document.getElementById('tr10').style.display="block";
+document.getElementById('r11').style.display="block";
+document.getElementById('tr11').style.display="block";*/
 
 
 }

@@ -77,6 +77,8 @@ function clckmes() {
          
          ctx.lineTo(2, 240);
          ctx.stroke();
+         document.getElementById('r1').style.display="none";
+         document.getElementById('tr1').style.display="none";
          document.getElementById('r2').style.display="block";
         document.getElementById('tr2').style.display="block";
          document.getElementById('msbtn').disabled=true;
@@ -102,6 +104,8 @@ function clckmes() {
              
              ctx.lineTo(2, 240);
              ctx.stroke();
+             document.getElementById('r2').style.display="none";
+             document.getElementById('tr2').style.display="none";
              document.getElementById('r3').style.display="block";
              document.getElementById('tr3').style.display="block";
              document.getElementById('msbtn').disabled=true;
@@ -127,6 +131,8 @@ function clckmes() {
                  
                  ctx.lineTo(2, 240);
                  ctx.stroke();
+                 document.getElementById('r3').style.display="none";
+                document.getElementById('tr3').style.display="none";
                  document.getElementById('r4').style.display="block";
                 document.getElementById('tr4').style.display="block";
                  document.getElementById('msbtn').disabled=true;
@@ -154,6 +160,8 @@ function clckmes() {
                      
                      ctx.lineTo(2, 240);
                      ctx.stroke();
+                     document.getElementById('r4').style.display="none";
+                     document.getElementById('tr4').style.display="none";
                      document.getElementById('r5').style.display="block";
                      document.getElementById('tr5').style.display="block";
                      document.getElementById('msbtn').disabled=true;
@@ -180,6 +188,8 @@ function clckmes() {
                          
                          ctx.lineTo(2, 240);
                          ctx.stroke();
+                         document.getElementById('r5').style.display="none";
+                        document.getElementById('tr5').style.display="none";
                          document.getElementById('r6').style.display="block";
                          document.getElementById('tr6').style.display="block";
                          document.getElementById('msbtn').disabled=true;
@@ -204,6 +214,8 @@ function clckmes() {
                              
                              ctx.lineTo(2, 240);
                              ctx.stroke();
+                             document.getElementById('r6').style.display="none";
+                             document.getElementById('tr6').style.display="none";
                              document.getElementById('r7').style.display="block";
                              document.getElementById('tr7').style.display="block";
                              document.getElementById('msbtn').disabled=true;
@@ -231,6 +243,8 @@ function clckmes() {
                                  
                                  ctx.lineTo(2, 240);
                                  ctx.stroke();
+                                 document.getElementById('r7').style.display="none";
+                                 document.getElementById('tr7').style.display="none";
                                  document.getElementById('r8').style.display="block";
                                  document.getElementById('tr8').style.display="block";
                                  document.getElementById('msbtn').disabled=true;
@@ -256,6 +270,8 @@ function clckmes() {
                                      
                                      ctx.lineTo(2, 240);
                                      ctx.stroke();
+                                     document.getElementById('r8').style.display="none";
+                                     document.getElementById('tr8').style.display="none";
                                      document.getElementById('r9').style.display="block";
                                      document.getElementById('tr9').style.display="block";
                                      document.getElementById('msbtn').disabled=true;
@@ -283,6 +299,8 @@ function clckmes() {
                                          
                                          ctx.lineTo(2, 240);
                                          ctx.stroke();
+                                         document.getElementById('r9').style.display="none";
+                                         document.getElementById('tr9').style.display="none";
                                          document.getElementById('r10').style.display="block";
                                          document.getElementById('tr10').style.display="block";
                                          document.getElementById('msbtn').disabled=true;
@@ -308,6 +326,8 @@ function clckmes() {
                                              
                                              ctx.lineTo(2, 240);
                                              ctx.stroke();
+                                             document.getElementById('r10').style.display="none";
+                                             document.getElementById('tr10').style.display="none";
                                              document.getElementById('r11').style.display="block";
                                              document.getElementById('tr11').style.display="block";
                                              document.getElementById('msbtn').disabled=true;

@@ -119,37 +119,41 @@ table,th,td{
     #tr1{
     position: absolute;
     top: 350%;
-    left:0.2%;
+    left:-1%;
     font-size: small;
     font-weight: bold;
     }
 
     #r2{
         position: absolute;
-    top:72px;
-    left:500px;
+        top: 315%;
+        left:2.7%;
+        width:0%;
+        height: 55%;
     border-radius: 80%;
     background-color: red;
     }
     #tr2{
         position: absolute;
-        top:132px;
-        left:490px;
+        top: 364%;
+        left:2%;
         font-size: small;
         font-weight: bold;
 
         }
     #r3{
     position: absolute;
-    top:72px;
-    left:515px;
+       top: 315%;
+        left:5.7%;
+        width:0%;
+        height: 72%;
     border-radius: 80%;
     background-color: red;
     }
     #tr3{
         position: absolute;
-        top:150px;
-        left:510px;
+        top: 382%;
+        left:5.2%;
         font-size: small;
         font-weight: bold;
 
@@ -157,15 +161,17 @@ table,th,td{
 
     #r4{
         position: absolute;
-    top:72px;
-    left:530px;
+        top: 315%;
+        left:9.2%;
+        width:0%;
+        height: 87%;
     border-radius: 80%;
     background-color: red;
     }
     #tr4{
         position: absolute;
-        top:170px;
-        left:520px;
+        top: 398%;
+        left:6.7%;
         font-size: small;
         font-weight: bold;
 
@@ -173,45 +179,51 @@ table,th,td{
 
     #r5{
         position: absolute;
-    top:72px;
-    left:545px;
+        top: 315%;
+        left:12.7%;
+        width:0%;
+        height: 95%;
     border-radius: 80%;
     background-color: red;
     }
     #tr5{
         position: absolute;
-        top:190px;
-        left:538px;
+        top: 405%;
+        left:11.2%;
         font-size: small;
         font-weight: bold;
 
         }
     #r6{
         position: absolute;
-    top:72px;
-    left:552px;
+        top: 315%;
+        left:14.4%;
+        width:0%;
+        height:110%;
     border-radius: 80%;
     background-color: red;
     }
     #tr6{
         position: absolute;
-        top:210px;
-        left:545px;
+        top: 420%;
+        left:14.4%;
         font-size: small;
         font-weight: bold;
 
         }
     #r7{
         position: absolute;
-    top:72px;
-    left:559px;
+        top: 315%;
+        left:15.9%;
+        width:0%;
+        height: 95%;
     border-radius: 80%;
     background-color: red;
     }
     #tr7{
         position: absolute;
-        top:190px;
-        left:557px;
+        top: 405%;
+        left:15.9%;
         font-size: small;
         font-weight: bold;
 
@@ -219,60 +231,68 @@ table,th,td{
 
     #r8{
     position: absolute;
-    top:72px;
-    left:574px;
+    top: 315%;
+    left:19%;
+    width:0%;
+    height: 86%;
     border-radius: 80%;
     background-color: red;
     }
     #tr8{
         position: absolute;
-        top:170px;
-        left:574px;
+        top: 395%;
+        left:18%;
         font-size: small;
         font-weight: bold;
 
         }
     #r9{
         position: absolute;
-    top:72px;
-    left:588px;
+        top: 315%;
+        left:22.8%;
+        width:0%;
+        height: 72%;
     border-radius: 80%;
     background-color: red;
     }
     #tr9{
         position: absolute;
-        top:150px;
-        left:585px;
+        top: 382%;
+        left:20.5%;
         font-size: small;
         font-weight: bold;
 
         }
     #r10{
         position: absolute;
-    top:72px;
-    left:604px;
-    border-radius: 80%;
-    background-color: red;
+        top: 315%;
+        left:26.2%;
+        width:0%;
+        height: 55%;
+        border-radius: 80%;
+        background-color: red;
     }
     #tr10{
         position: absolute;
-        top:132px;
-        left:591px;
+        top: 364%;
+        left:23.2%;
         font-size: small;
         font-weight: bold;
 
         }
     #r11{
         position: absolute;
-    top:73px;
-    left:613px;
-    border-radius: 80%;
-    background-color: red;
+        top: 315%;
+        left:29%;
+        width:0%;
+        height: 40%;
+        border-radius: 80%;
+        background-color: red;
     }
     #tr11{
         position: absolute;
-        top:114px;
-        left:610px;
+        top: 350%;
+        left:29%;
         font-size: small;
         font-weight: bold;
 
