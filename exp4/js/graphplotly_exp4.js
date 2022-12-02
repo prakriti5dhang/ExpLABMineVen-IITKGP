@@ -27,8 +27,8 @@ var data = [
     yaxis: {range: [0.00, 0.1], title: "Q"},  
     title: "Best Fit"
   };
-  
-  Plotly.newPlot("myPlot4", data, layout);
+  var config = {responsive: true}
+  Plotly.newPlot("myPlot4", data, layout, config);
   document.getElementById('myPlot4').style.display="block";
   document.getElementById('myChartexp4').style.display="none";
 }
