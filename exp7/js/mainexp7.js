@@ -92,7 +92,7 @@ clearInterval(imgod);
 function moveplate1(){  /* move 1st  throtling plate to the required position*/
 
   var iplate1 = document.getElementById("contldevice1");   
-  var orgtop = 350; /* initial position */
+  var orgtop = 300; /* initial position */
   clearInterval(imgobj1);
   imgobj1 = setInterval(frame, 5); /* frame is 5 denotes the speed of the movement*/
   function frame() {
@@ -117,7 +117,7 @@ function moveplate1(){  /* move 1st  throtling plate to the required position*/
 function moveplate2(){  /* move 1st  throtling plate to the required position*/
 
   var iplate2 = document.getElementById("contldevice2");   
-  var orgtop2 = 350; /* initial position */
+  var orgtop2 = 300; /* initial position */
   clearInterval(imgobj2);
   imgobj2 = setInterval(frame, 5); /* frame is 5 denotes the speed of the movement*/
   function frame() {
@@ -139,7 +139,7 @@ function moveplate2(){  /* move 1st  throtling plate to the required position*/
 function moveplate3(){  /* move 1st  throtling plate to the required position*/
 
 var iplate3 = document.getElementById("contldevice3");   
-var orgtop3 = 350; /* initial position */
+var orgtop3 = 300; /* initial position */
 clearInterval(imgobj3);
 imgobj3 = setInterval(frame, 5); /* frame is 5 denotes the speed of the movement*/
 function frame() {
@@ -160,7 +160,7 @@ function frame() {
 function moveplate4(){  /* move 1st  throtling plate to the required position*/
 
 var iplate4 = document.getElementById("contldevice4");   
-var orgtop4 = 350; /* initial position */
+var orgtop4 = 300; /* initial position */
 clearInterval(imgobj4);
 imgobj4 = setInterval(frame, 5); /* frame is 5 denotes the speed of the movement*/
 function frame() {
@@ -178,7 +178,7 @@ function frame() {
 function moveplate5(){  /* move 1st  throtling plate to the required position*/
 
 var iplate4 = document.getElementById("contldevice5");   
-var orgtop4 = 350; /* initial position */
+var orgtop4 = 300; /* initial position */
 clearInterval(imgobj4);
 imgobj4 = setInterval(frame, 5); /* frame is 5 denotes the speed of the movement*/
 function frame() {

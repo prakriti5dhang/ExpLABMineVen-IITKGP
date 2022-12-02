@@ -11,21 +11,7 @@ function showbestfit(){
       xArray.push(parseFloat(rwe1[3].innerHTML));
       yArray.push(parseFloat(rwe1[4].innerHTML));
   }
-  //alert(xArray);
-  //alert(yArray);
-  /*var xSum = xArray.reduce(function(a, b){return a + b;}, 0);
-  var ySum = yArray.reduce(function(a, b){return a + b;}, 0);
-  var slope = ySum / xSum;*/
-  //alert(xSum);
- // alert(ySum);
-  //alert(slope);
-  // Generate values
-  /*var xValues = [];
-  var yValues = [];
-  for (var x = 0.01; x <= 0.2; x += 1) {
-    xValues.push(x);
-    yValues.push(x * slope);
-  }*/
+  
   var xValues = [0.0524,0.0840];
   var yValues = [0.0315,0.063];
  // alert(xValues);

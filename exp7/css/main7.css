@@ -85,7 +85,7 @@ table,th,td{
  #contldevice1 {
     position: absolute;
     left: 0%;
-    top:350%;
+    top:300%;
     width:12%;
     animation: tplate1 10s linear;
    /* margin-left: 50% !important;*/
@@ -95,7 +95,7 @@ table,th,td{
 #contldevice2 {
     position: absolute;
     left: 0%;
-    top:350%;
+    top:300%;
     width:12%;
    
   }
@@ -103,7 +103,7 @@ table,th,td{
 #contldevice3 {
     position: absolute;
     left: 0%;
-    top:350%;
+    top:300%;
     width:12%;
   }
 
@@ -111,14 +111,14 @@ table,th,td{
  #contldevice4 {
     position: absolute;
     left: 0%;
-    top:350%;
+    top:300%;
     width:12%;
    
   }
   #contldevice5 {
     position: absolute;
     left: 0%;
-    top:350%;
+    top:300%;
     width:12%;
    
   }
