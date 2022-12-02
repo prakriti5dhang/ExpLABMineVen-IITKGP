@@ -64,7 +64,7 @@ function moveplate2(){  /* move 1st  throtling plate to the required position*/
   clearInterval(imgobj2);
   imgobj2 = setInterval(frame, 5); /* frame is 5 denotes the speed of the movement*/
   function frame() {
-    if (orgtop2 == 3) { /* moves to 100 top positon*/
+    if (orgtop2 == 0) { /* moves to 100 top positon*/
       clearInterval(imgobj2); /* stops to 100 postion*/
       document.getElementById('anmbtn').disabled=false;
     } else {

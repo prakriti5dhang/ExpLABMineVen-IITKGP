@@ -142,7 +142,7 @@ table,th,td{
  /*  Flow control device 2 */
 #contldevice2 {
     position: absolute;
-    left: 0%;
+    left: -0.5%;
     top:350%;
     width:13%;
    
@@ -152,7 +152,7 @@ table,th,td{
     position: absolute;
     left: 0%;
     top:350%;
-    width:13%;
+    width:13.5%;
   }
 
   /*  Flow control device 4 */
