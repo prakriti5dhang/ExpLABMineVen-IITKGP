@@ -75,7 +75,7 @@ table,th,td{
   #ductset{
     position: relative;
     top:10%;
-    left:28%; 
+    left:55%; 
     width: 90%;
     height: 30%;
     
@@ -85,20 +85,20 @@ table,th,td{
   #psychro{
     position: absolute;
     top:2%;
-    left: -5%;
+    left: 10%;
     width: 35%;
 }
 
 #ring{
   position: absolute;
-  top:-2%;
-  left: 10%;
+  top:-1%;
+  left: 25%;
   width:6%;
 }
 #readw1{
   position: absolute;
   top: 87.5%;
-  left: 74%;
+  left: 100.5%;
   width:5%;
   animation: rotation 5s linear 0s infinite;
   animation-play-state: paused;
@@ -106,7 +106,7 @@ table,th,td{
 #readw2{
   position: absolute;
   top: 85%;
-  left: 72%;
+  left: 98%;
   width: 10%;
   animation: rotation 1s linear 0s infinite;
   animation-play-state: paused;
@@ -124,7 +124,7 @@ table,th,td{
 #myCanvas{
     position: absolute;
     top:50%;
-    left:75.5%; 
+    left:102.5%; 
     width:1.2%;
     height: 33%;
     display: block;
@@ -133,7 +133,7 @@ table,th,td{
     #myCanvas1{
       position: absolute;
       top:50%;
-    left:75.5%; 
+    left:102.5%; 
     width:1.2%;
     height: 33%;
       display: none;
@@ -142,7 +142,7 @@ table,th,td{
 #myCanvas2{
     position: absolute;
     top: 59%;
-    left:4%;
+    left:19%;
     width:1%;
     height: 40%;
         
@@ -153,7 +153,7 @@ table,th,td{
      /*  Flow control device  1 */
 #contldevice1 {
     position: absolute;
-    left: 28.7%;
+    left: 55%;
     top: 100%;
     width:15.2%;
     animation: tplate1 10s linear;
@@ -163,17 +163,17 @@ table,th,td{
  /*  Flow control device 2 */
 #contldevice2 {
     position: absolute;
-    left: 28.7%;
+    left: 55%;
     top: 100%;
-    width:15.3%;
+    width:15.2%;
    
   }
   /*  Flow control device 3 */
 #contldevice3 {
     position: absolute;
-    left: 28.7%;
+    left: 55%;
     top: 100%;
-    width:15.3%;
+    width:15.2%;
   }
 
   @media print {
