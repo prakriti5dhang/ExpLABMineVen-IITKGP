@@ -204,30 +204,27 @@ function anmeasure(){  /* anemometer traversing button*/
       
       if(disp==1){ /* 1st click*/
          document.getElementById('plate2').style.display="block";
-         document.getElementById('plate1').style.display="none";
          document.getElementById('measure').style.display="none";
          document.getElementById('velread').disabled=false;
          document.getElementById('anotherread').style.display="none";
          document.getElementById('datam').style.display="none";
         
-         //document.getElementById('anemometerr').style.position="absolute";
+         document.getElementById('anemometerr').style.position="absolute";
          document.getElementById('nobtn').display="none";
 
       }
       else if(disp==2){ /*2nd click*/
          document.getElementById('plate3').style.display="block";
-         document.getElementById('plate2').style.display="none";
          document.getElementById('measure').style.display="none";
          document.getElementById('velread').disabled=false;
          document.getElementById('anotherread').style.display="none";
          document.getElementById('datam').style.display="none";
-         //document.getElementById('anemometerr').style.left="390px";
-        // document.getElementById('anemometerr').style.bottom="120px";
+         document.getElementById('anemometerr').style.left="390px";
+         document.getElementById('anemometerr').style.bottom="120px";
          document.getElementById('nobtn').display="none";
       }
       else if(disp==3){ /*3rd click*/
          document.getElementById('plate4').style.display="block";
-         document.getElementById('plate3').style.display="none";
          document.getElementById('measure').style.display="none";
          document.getElementById('velread').disabled=false;
          document.getElementById('anotherread').style.display="none";
@@ -236,7 +233,6 @@ function anmeasure(){  /* anemometer traversing button*/
       }
       else if (disp==4){ /* 4th click*/
          document.getElementById('plate5').style.display="block";
-         document.getElementById('plate4').style.display="none";
          document.getElementById('measure').style.display="none";
          document.getElementById('velread').disabled=false;
          document.getElementById('anotherread').style.display="none";
@@ -305,8 +301,8 @@ function showplotgraph(){ /* no button to stop taking anothe sets of reading*/
   
    if (confirm(text) == true) {*/
       document.getElementById('graphd').style.display="block";
-    //document.getElementById('formulashow').style.display="block";
-    document.getElementById('nobtn').disabled=true;
+    document.getElementById('formulashow').style.display="block";
+   
    document.getElementById('anotherread').style.display="none";
    document.getElementById('velr1').value='';
   document.getElementById('velr2').value='';
@@ -326,7 +322,7 @@ function showplotgraph(){ /* no button to stop taking anothe sets of reading*/
   document.getElementById('controlpanelv').style.display="block";
   document.getElementById('anmbtn').disabled=true;
   document.getElementById('obsanem').style.display="none";
-  //document.getElementById('formulashow').style.display="block";
+  document.getElementById('formulashow').style.display="block";
   //document.getElementById('plotModal').style.display="none";
   //$('#plotModal').modal('hide');
 
@@ -378,8 +374,8 @@ function veloread(){  /* get the velocity reading*/
       document.getElementById("velread").disabled=true;/*button for velread is disabled*/
       document.getElementById('velread').innerHTML='3rd Velocity Reading';
       
-      document.getElementById('user').style.display="block";
-      document.getElementById('anemometerr').style.display="block";/* display anemometer*/
+      //document.getElementById('user').style.display="none";
+      document.getElementById('anemometerr').style.display="none";/* display anemometer*/
       clearInterval(moveanemometerstick);
       
       
@@ -405,8 +401,8 @@ function veloread(){  /* get the velocity reading*/
       document.getElementById('measurebtn').disabled=false;/*button for click to measure is enabled*/
       document.getElementById("velread").disabled=true;/*button for velread is disabled*/
       document.getElementById('velread').innerHTML='3rd Velocity Reading';
-      document.getElementById('user').style.display="block";
-      document.getElementById('anemometerr').style.display="block";/* display anemometer*/
+      document.getElementById('user').style.display="none";
+      document.getElementById('anemometerr').style.display="none";/* display anemometer*/
       clearInterval(moveanemometerstick);
    }
    /*  3rd plate velocity readings */
@@ -428,8 +424,8 @@ function veloread(){  /* get the velocity reading*/
       document.getElementById('measurebtn').disabled=false;/*button for click to measure is enabled*/
       document.getElementById("velread").disabled=true; /*button for velread is disabled*/
       document.getElementById('velread').innerHTML='3rd Velocity Reading';
-      document.getElementById('user').style.display="block";
-      document.getElementById('anemometerr').style.display="block";/* display anemometer*/
+      document.getElementById('user').style.display="none";
+      document.getElementById('anemometerr').style.display="none";/* display anemometer*/
       clearInterval(moveanemometerstick);
    }
 /*  4th plate velocity readings */
@@ -451,8 +447,8 @@ function veloread(){  /* get the velocity reading*/
       document.getElementById('measurebtn').disabled=false;/*button for click to measure is enabled*/
       document.getElementById("velread").disabled=true; /*button for velread is disabled*/
       document.getElementById('velread').innerHTML='3rd Velocity Reading';
-      document.getElementById('user').style.display="block";
-      document.getElementById('anemometerr').style.display="block";/* display anemometer*/
+      document.getElementById('user').style.display="none";
+      document.getElementById('anemometerr').style.display="none";/* display anemometer*/
       clearInterval(moveanemometerstick);
    }
 /*  5th plate velocity readings */
@@ -474,7 +470,7 @@ function veloread(){  /* get the velocity reading*/
       document.getElementById('measurebtn').disabled=false; /*button for click to measure is enabled */
       document.getElementById("velread").disabled=true; /*button for velread is disabled */
       document.getElementById('velread').innerHTML='3rd Velocity Reading'; /* change button text to 3rd vel reading */
-      document.getElementById('user').style.display="block";
+      //document.getElementById('user').style.display="none";
       document.getElementById('anemometerr').style.display="block"; /* display anemometer */
       clearInterval(moveanemometerstick); /* pause the movement of anemometer */
    }
@@ -505,7 +501,7 @@ function caloutput(){
   document.getElementById('coeff').value='0.60'; /* α = coefficent discharge */
   document.getElementById('btnobv').disabled= false; /* button for add obs to the table is enabled */
   document.getElementById('measurebtn').disabled=true; /* button for click to measure is diabled */
-  //$("#btnobv").fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300);
+  $("#btnobv").fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300);
   
        }
       else if(dispm==2){
@@ -521,7 +517,7 @@ function caloutput(){
          document.getElementById('coeff').value='0.62';
          document.getElementById('btnobv').disabled= false; /* button for add obs to the table is enabled */
          document.getElementById('measurebtn').disabled=true; /* button for click to measure is diabled */
-         //$("#btnobv").fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300);
+         $("#btnobv").fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300);
        }
        else if(dispm==3){
          obsnt = '3';
@@ -536,7 +532,7 @@ function caloutput(){
          document.getElementById('coeff').value='0.68';
          document.getElementById('btnobv').disabled= false; /* button for add obs to the table is enabled */
          document.getElementById('measurebtn').disabled=true; /* button for click to measure is diabled */
-        // $("#btnobv").fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300);
+         $("#btnobv").fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300);
        }
        else if(dispm==4){
          obsnt = '4';
@@ -551,7 +547,7 @@ function caloutput(){
          document.getElementById('coeff').value='0.69';
          document.getElementById('btnobv').disabled= false; /* button for add obs to the table is enabled */
          document.getElementById('measurebtn').disabled=true; /* button for click to measure is diabled */
-        // $("#btnobv").fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300);
+         $("#btnobv").fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300);
        }
 
        else if(dispm==5){
@@ -567,7 +563,7 @@ function caloutput(){
          document.getElementById('coeff').value='0.75';
          document.getElementById('btnobv').disabled= false; /* button for add obs to the table is enabled */
          document.getElementById('measurebtn').disabled=true; /* button for click to measure is diabled */
-        // $("#btnobv").fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300);
+         $("#btnobv").fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300);
        }
        /* scroll down */
        document.body.scrollBy(0,500);

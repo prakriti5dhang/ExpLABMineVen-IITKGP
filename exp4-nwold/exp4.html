@@ -92,7 +92,7 @@
    
 </div>
 
-<div >
+<div class="content-wrapper">
   
 <div class=" container-fluid">
   <div class="row">
@@ -125,17 +125,17 @@
     
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-           <div id="anotherread" class="card border-primary rounded" style="display:none;">
+           <div id="anotherread" class="card border-primary rounded" style="display: none;">
              <div class="card-body" style="background-color:rgb(255, 231, 209);">
                <div class="card-title" style="text-align: left; font-weight: bold; font-size: large;">Take another Throttle Device for mesurement</div>
                <button type="button" id="yesbtn" class="btn btn-primary col-3 col-sm-3 col-xs-3 col-lg-3" onclick="yesread(); ">OK</button> <!-- onclick="yesread();-->
                <button type="button" id="nobtn" class="btn btn-success float-right col-3 col-sm-3 col-xs-3 col-lg-3" data-toggle="modal" data-target="#plotModal"   style="display: none;">Plot</button> <!--onclick="plotgrp();"-->
              </div>
            </div>
-        <!--/div>
-      </div-->
+        </div>
+      </div>
       <!--div class="row">
-        <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12"-->
+        <div class="col-xs-6 col-md-12 col-sm-6 col-lg-12"-->
            <div id="graphd" class="card " style="display: none; ">
              <div class="card-body" style="background-color:rgb(224, 235, 255); " >
                <div class="card-title col-md-12" style="text-align: center; font-weight: bold; font-size: large;">Graph Plot</div>
@@ -147,8 +147,8 @@
                
              </div>
            </div>
-        </div>
-      </div>
+        <!--/div>
+      </div-->
       
     </div>
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -158,7 +158,7 @@
           <p class="card-text" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Start the experiment by clicking the button</p>
             <button type="button" id="strtbtn" class="btn btn-success col-md-4 col-sm-6 col-xs-3 col-lg-4" data-toggle="modal" data-target="#rotatephone"  >Start</button><!--onclick= " startexp();"-->
             <button  id="instbtn" class="btn btn-primary float-right col-md-4 col-sm-6 col-xs-6 col-lg-6" data-toggle="collapse" data-target="#instdisp" disabled >Instruction</button> <!-- onmouseover="instbtnd()" onmouseout="instbtnnd()" onclick="instbd();"-->
-            </div></div>
+            </div>
             <div id="instdisp" class="collapse card border-primary rounded " > <!--style="display: none;"-->
               <div class="card-body" style="background-color:rgb(255, 235, 254);">
             <h4 class="card-title">Instruction</h4>
@@ -171,13 +171,13 @@
         <li> Click on the measure button to measure the mean velocity, pressure difference, coefficient of discharge.</li>
         <li>Then click on the button "Add result to observation table" to add all the values to the table.</li>
         <li>Click on the "OK" button for regulating the air and take 4 more measurements.</li>
-        <li>Click on the button "Plot" to plot the graph for the coefficient of discharge. Double click "Show Best Fit" button to display the best fit graph</li>
+        <li>Click on the button "Plot" to plot the graph for the coefficient of discharge.</li>
         
          </ol>
                 </div>
                 </div> 
                 
-              <!--div id="formulashow" class="card border-primary rounded" style="display: block; ">
+              <div id="formulashow" class="card border-primary rounded" style="display: block;">
                <div  class="card-body" style="background-color:rgb(251, 255, 214);">
                  <h4 class="card-title">
                   <div class="d-flex bd-highlight">
@@ -185,9 +185,9 @@
                     <div id="info" class="p-2 bd-highlight" style="display: block;"><svg id="hidebtn" onclick= "showformula();"  width="20" height="20" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg></div>
                     <div id="exitinfo" class="p-2 bd-highlight" style="display: none;"><button type="button" onclick= "hideformula();" class="close " data-bs-dismiss="alert" aria-label="Close" width="24" height="24">&times;</button></div>
                    
-                    
+                    <!-- class="d-flex-shrink-0 me-2 col-3 float-right-->
                   </div>
-                 
+                   
                  </h4>
                    
                   <div class="alert alert-warning d-flex align-items-center" role="alert">
@@ -213,15 +213,15 @@
                   </div>
                
                 </div>
-                
+
               </div>
               
               
-              <svg xmlns="http://www.w3.org/2000/svg" style="display: block;">
-                <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
-                </symbol>
-              </svg-->
+              <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+              <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+              </symbol>
+            </svg>
 
             <div id="obsanem" class="collapse card border-primary rounded border border-5" style="display:none;">
               <div class="card-body" style="background-color:rgb(224, 235, 255);">
@@ -314,7 +314,7 @@
       <!--/div--> <!--control panel card ends-->
 
 
-    <!--/div> <control panel div ends-->
+    </div> <!--control panel div ends-->
     </div> <!-- control panel col ends-->
 </div> <!-- main row ends-->
 </div> <!-- main container ends-->

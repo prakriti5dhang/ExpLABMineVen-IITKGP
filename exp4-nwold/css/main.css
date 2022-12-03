@@ -1,0 +1,163 @@
+/* Lab:exp_4_Calibration of orifice plates
+	 File name: main.css
+   Author:Prakriti Dhang
+*/
+
+table,th,td{
+    text-align: center;
+}
+
+ol{
+   font-size: 14px; 
+}
+
+.img-container{
+   display: inline-block;
+   position: relative;
+ }
+
+/*  Throtling plate 1 */
+#plate1 {
+    position: absolute;
+    left: 0%;
+    bottom: -130%;
+    width:12.5%;
+    animation: tplate1 10s linear;
+   /* margin-left: 50% !important;*/
+  }
+
+ /*  Throtling plate 2 */
+  #plate2 {
+    position: absolute;
+    left: 0%;
+    bottom: -130%;
+    width:12.5%;
+   
+  }
+  /*  Throtling plate 3 */
+  #plate3 {
+    position: absolute;
+    left: 0%;
+    bottom: -130%;
+    width:12.5%;
+  }
+
+  /*  Throtling plate 4 */
+  #plate4 {
+    position: absolute;
+    left: 0%;
+    bottom: -130%;
+    width:12.5%;
+   
+  }
+  /*  Throtling plate 5 */
+  #plate5 {
+   position: absolute;
+   left: 0%;
+    bottom: -130%;
+    width:12.5%;
+ }
+ 
+
+ /* Anemometer positon */
+ #anemometerr{
+    position: absolute;
+    bottom: -60%;  
+    left: 100%; 
+    width:6%;
+    
+ }
+
+ /*User postion */
+ #user{
+    position: absolute;
+    bottom: -55%;  
+    left: 94%; 
+    width:10%;
+    
+ }
+ /* Tube nanometer positon */
+ #utnanometer{
+   position: absolute;
+   left: 42.6%; 
+   bottom: -136%; 
+   width: 25%;
+   
+}
+ #utnanometer1{
+   position: absolute;
+   left: 42.6%; 
+   bottom: -136%; 
+   width: 25%;
+   
+}
+#utnanometer2{
+   position: absolute;
+   left: 42.6%; 
+   bottom: -136%; 
+   width: 25%;
+}
+#utnanometer3{
+   position: absolute;
+   left: 42.6%; 
+   bottom: -136%; 
+   width: 25%;
+   
+}
+#utnanometer4{
+   position: absolute;
+   left: 42.6%; 
+   bottom: -136%; 
+   width: 25%;
+   
+}
+#utnanometer5{
+   position: absolute;
+   left: 42.6%; 
+   bottom: -136%; 
+   width: 25%;
+   
+}
+
+/* 1st tube positon */
+#tubelinesn{
+   position: absolute;
+   left: 28%; 
+   bottom: -39%; 
+   width: 36%;
+}
+
+/* 2nd tube positon */
+#tubelinesn2{
+   position: absolute;
+   left: 37%; 
+   bottom: -35%; 
+   width: 14.5%;  
+}
+
+/* chart js hide header and footer */
+@media print {
+   body {-webkit-print-color-adjust: exact !important;}
+   }
+   @page {
+      margin: 1in; 
+    }
+
+   @print {
+      @page :footer {
+         display: none
+         :disabled:true
+          
+      }
+    
+      @page :header {
+         display: none
+          :disabled:true
+      }
+  }
+  @media print {
+   #myChartexp4 {
+     padding-right: 1cm;
+   }
+ }
+

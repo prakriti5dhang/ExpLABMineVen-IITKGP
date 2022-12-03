@@ -1,5 +1,5 @@
 //experimental data
-/*var rawData = [
+var rawData = [
     [0.0524, 0.0315],
     [0.0614, 0.038],
     [0.0699, 0.0469],
@@ -57,4 +57,4 @@
       theoryData[i] = [rawData[i][0], formula(coeff, rawData[i][0])];
     }
     return theoryData;
-  }*/
+  }
