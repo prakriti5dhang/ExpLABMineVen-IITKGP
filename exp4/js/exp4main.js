@@ -339,7 +339,7 @@ function showplotgraph(){ /* no button to stop taking anothe sets of reading*/
   document.getElementById('measure').style.display="none";
   document.getElementById('datam').style.display="none";
   document.getElementById('obvtable').style.display="block";
-  document.getElementById('controlpanelv').style.display="none";
+  document.getElementById('controlpanelv').style.display="block";
   document.getElementById('cardr').style.display="none";
   document.getElementById('anmbtn').disabled=true;
   document.getElementById('obsanem').style.display="none";

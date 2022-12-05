@@ -32,7 +32,7 @@
   <script src="../exp4/js/graphplotly_exp4.js"></script>
   <script src="../exp4/js/exp4main.js"></script>
  
-  <script src="../js/jquery-1.7.1.min.js"></script>
+  <!--script src="../js/jquery-1.7.1.min.js"></script-->
   <!--script src="../exp4/js/zoomscale.js"></script-->
   <!--script src = "https://code.highcharts.com/highcharts.js"></script> 
   <script src="https://code.highcharts.com/modules/exporting.js"></script>
@@ -154,21 +154,22 @@
       
     </div>
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-      <div id="controlpanelv" class="card border-primary rounded">
-        <div class="card-body" style="background-color:rgb(251, 255, 214); ">
+      <div class="card border-primary rounded">
+        <div class="card-body" style="background-color:rgb(251, 255, 214);">
           <h4 class="card-title">Control Elements</h4>
-          <p class="card-text" id="card1" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Start the experiment by clicking the button</p>
-            <button type="button" id="strtbtn" class="btn btn-success col-md-3 col-sm-3 col-xs-3" data-toggle="modal" data-target="#rotatephone"  >Start</button><!--onclick= " startexp();"-->
-            <button  id="instbtn" class="btn btn-primary float-right col-md-3 col-sm-3 col-xs-3" data-toggle="collapse" data-target="#instdisp" disabled >Instruction</button> <!-- onmouseover="instbtnd()" onmouseout="instbtnnd()" onclick="instbd();"-->
-      </div>
-    </div>
-
-            <div id="instdisp" class="collapse card border-primary rounded " > <!--style="display: none;"-->
-              <div class="card-body"  style="background-color:rgb(255, 235, 254);">
+          <p class="card-text" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">To start the experiment click the button</p>
+            <button type="button" id="strtbtn" class="btn btn-primary col-md-3 col-sm-3 col-xs-3 col-lg-3"  data-toggle="modal" data-target="#rotatephone" >Start</button>
+            <!--button type="button" id="nobtn" class="btn btn-warning col-md-3 col-sm-3 col-xs-3 col-lg-3" data-toggle="modal" data-target="#cancelexp" >No</button-->
+            <button type="button" id="instbtn" class="btn btn-success float-right col-md-3 col-sm-3 col-xs-3 col-lg-3" data-toggle="collapse" data-target="#instdisp1" disabled>Instruction</button>
+</div></div>
+            <div id="instdisp1" class="collapse card border-primary rounded " > <!--style="display: none;"-->
+              <div class="card-body" style="background-color:rgb(220, 253, 209);">
             <h4 class="card-title">Instruction</h4>
+            
          <ol type="1">
           <li>Hover on the flow control device to check the diameter.</li>
-          <li>Click on the flow control device for regulating the air flow in the duct and measure the static pressure and velocity pressure.</li>
+          <li>Click on the flow control device for regulating the air flow in the duct and measure the static pressure and velocity pressure.
+          </li>
          
           <li>Click on the button "Anemometer Traversing" for traversing the anemometer and measure the velocity.</li> 
         <li>Click on the button "Velocity Reading" thrice to take three velocity readings.</li>
@@ -176,10 +177,13 @@
         <li>Then click on the button "Add result to observation table" to add all the values to the table.</li>
         <li>Click on the "OK" button for regulating the air and take 4 more measurements.</li>
         <li>Click on the button "Plot" to plot the graph for the coefficient of discharge. Double click "Show Best Fit" button to display the best fit graph</li>
-        
+  
          </ol>
                 </div>
                 </div> 
+      
+        
+         
               
                 <div class="row">
              <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
