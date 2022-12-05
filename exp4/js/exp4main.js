@@ -259,8 +259,8 @@ function anmeasure(){  /* anemometer traversing button*/
          //document.getElementById('yesbtn').innerHTML='Plot';
 
       }
-      else if(disp==5){
-         //document.getElementById('pltbtn').display="none";
+      else {
+        
          document.getElementById('noplatesModal').modal="show";
          document.getElementById("noplatesModal").classList.add("show");
          /*document.getElementById('anotherread').style.display="block"
@@ -293,6 +293,7 @@ function noplate(){ /* display plot button */
    document.getElementById('anotherread').style.display="block";
          document.getElementById('anmbtn').disabled=true;
          document.getElementById('pltbtn').style.display="block";
+         document.getElementById('yesbtn').style.display="none";
          document.getElementById("noplatesModal").style.display = "none";
      document.getElementById("noplatesModal").classList.remove("show");
      document.getElementById("yesbtn").disabled=true;
@@ -319,10 +320,9 @@ function showplotgraph(){ /* no button to stop taking anothe sets of reading*/
   
    if (confirm(text) == true) {*/
       document.getElementById('graphd').style.display="block";
-    document.getElementById('formulashow').style.display="block";
-    document.getElementById('pltbtn').disabled=true;
-   document.getElementById('anotherread').style.display="block";
-   document.getElementById('pltbtn').disabled=true;
+   document.getElementById('anotherread').style.display="none";
+   document.getElementById('pltbtn').style.display="block";
+   document.getElementById('pltbtn').disabled=false;
   document.getElementById('yesbtn').disabled=true;
    document.getElementById('velr1').value='';
   document.getElementById('velr2').value='';
@@ -339,7 +339,8 @@ function showplotgraph(){ /* no button to stop taking anothe sets of reading*/
   document.getElementById('measure').style.display="none";
   document.getElementById('datam').style.display="none";
   document.getElementById('obvtable').style.display="block";
-  document.getElementById('controlpanelv').style.display="block";
+  document.getElementById('controlpanelv').style.display="none";
+  document.getElementById('cardr').style.display="none";
   document.getElementById('anmbtn').disabled=true;
   document.getElementById('obsanem').style.display="none";
  

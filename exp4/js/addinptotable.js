@@ -54,18 +54,23 @@ var row = otable.insertRow(++tabrowindex); // Row increment
     }, 3000);
 
    
-   /* rows = otable.rows;
+    rows = otable.rows;
   for (i = 1; i < (rows.length ); i++) {
    
     x = rows[i].getElementsByTagName("td")[0];
    
     if (Number(x.innerHTML) == 5) {
-        document.getElementById('graphd').style.display="block";
-       // document.getElementById('formulashow').style.display="block";
+      document.getElementById('anotherread').style.display="block";
+      document.getElementById('cardr').style.display="none";
+   document.getElementById('pltbtn').style.display="block";
+   document.getElementById('yesbtn').style.display="none";
+       
+      /*document.getElementById('graphd').style.display="block";
+   document.getElementById('anotherread').style.display="none";
+   document.getElementById('pltbtn').style.display="none";
+   document.getElementById('yesbtn').style.display="none";
    
-   document.getElementById('anotherread').style.display="block";
-   document.getElementById('pltbtn').disabled=true;
-  document.getElementById('yesbtn').disabled=true;
+  
    document.getElementById('velr1').value='';
   document.getElementById('velr2').value='';
   document.getElementById('velr3').value='';
@@ -81,15 +86,17 @@ var row = otable.insertRow(++tabrowindex); // Row increment
   document.getElementById('measure').style.display="none";
   document.getElementById('datam').style.display="none";
   document.getElementById('obvtable').style.display="block";
-  document.getElementById('controlpanelv').style.display="block";
+  document.getElementById('controlpanelv').style.display="none";
   document.getElementById('anmbtn').disabled=true;
-  document.getElementById('obsanem').style.display="none";
+  document.getElementById('obsanem').style.display="none";*/
+   //document.getElementById('graphd').style.display="block";
+       //document.getElementById('formulashow').style.display="block";
     }
     else if(Number(x.innerHTML) < 5) {
         document.getElementById('graphd').style.display="none";
         
       }
-  }*/
+  }
  
 
     }
