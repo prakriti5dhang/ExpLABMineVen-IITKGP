@@ -128,10 +128,11 @@
            <div id="anotherread" class="card border-primary rounded" style="display:none;">
              <div class="card-body" style="background-color:rgb(255, 231, 209);">
                <div class="card-title" style="text-align: left; font-weight: bold; font-size: large;">Take another Throttle Device for mesurement</div>
-               <button type="button" id="yesbtn" class="btn btn-primary col-3 col-sm-3 col-xs-3 col-lg-3" onclick="yesread(); ">OK</button> <!-- onclick="yesread();-->
-               <button type="button" id="nobtn" class="btn btn-success float-right col-3 col-sm-3 col-xs-3 col-lg-3" data-toggle="modal" data-target="#plotModal"   style="display: none;">Plot</button> <!--onclick="plotgrp();"-->
+               <button type="button" id="yesbtn" class="btn btn-primary col-md-3 col-sm-3 col-xs-3 col-lg-3" style="display:block;" onclick="yesread(); ">OK</button> <!-- onclick="yesread();-->
+               <button type="button" id="pltbtn" class="btn btn-success  col-md-3 col-sm-3 col-xs-3 col-lg-3"    data-toggle="modal" data-target="#plotModal" style="display: none;">Plot</button--> <!--onclick="plotgrp();" -->
              </div>
            </div>
+          
         <!--/div>
       </div-->
       <!--div class="row">
@@ -153,12 +154,14 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
       <div id="controlpanelv" class="card border-primary rounded">
-        <div class="card-body" style="background-color:rgb(251, 255, 214);">
+        <div class="card-body" style="background-color:rgb(251, 255, 214); height: auto;">
           <h4 class="card-title">Control Elements</h4>
           <p class="card-text" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Start the experiment by clicking the button</p>
-            <button type="button" id="strtbtn" class="btn btn-success col-md-4 col-sm-6 col-xs-3 col-lg-4" data-toggle="modal" data-target="#rotatephone"  >Start</button><!--onclick= " startexp();"-->
-            <button  id="instbtn" class="btn btn-primary float-right col-md-4 col-sm-6 col-xs-6 col-lg-6" data-toggle="collapse" data-target="#instdisp" disabled >Instruction</button> <!-- onmouseover="instbtnd()" onmouseout="instbtnnd()" onclick="instbd();"-->
-            </div></div>
+            <button type="button" id="strtbtn" class="btn btn-success col-md-3 col-sm-3 col-xs-3" data-toggle="modal" data-target="#rotatephone"  >Start</button><!--onclick= " startexp();"-->
+            <button  id="instbtn" class="btn btn-primary float-right col-md-3 col-sm-3 col-xs-3" data-toggle="collapse" data-target="#instdisp" disabled >Instruction</button> <!-- onmouseover="instbtnd()" onmouseout="instbtnnd()" onclick="instbd();"-->
+      </div>
+    </div>
+
             <div id="instdisp" class="collapse card border-primary rounded " > <!--style="display: none;"-->
               <div class="card-body" style="background-color:rgb(255, 235, 254);">
             <h4 class="card-title">Instruction</h4>
@@ -177,52 +180,55 @@
                 </div>
                 </div> 
                 
-              <!--div id="formulashow" class="card border-primary rounded" style="display: block; ">
-               <div  class="card-body" style="background-color:rgb(251, 255, 214);">
-                 <h4 class="card-title">
-                  <div class="d-flex bd-highlight">
-                    <div class="p-2 flex-grow-1 bd-highlight" style="font-size: 20px ;">Formula Used</div>
-                    <div id="info" class="p-2 bd-highlight" style="display: block;"><svg id="hidebtn" onclick= "showformula();"  width="20" height="20" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg></div>
-                    <div id="exitinfo" class="p-2 bd-highlight" style="display: none;"><button type="button" onclick= "hideformula();" class="close " data-bs-dismiss="alert" aria-label="Close" width="24" height="24">&times;</button></div>
-                   
+                <div id="formulashow" class="card border-primary rounded" style="display: block; ">
+                  <div  class="card-body" style="background-color:rgb(251, 255, 214);">
+                    <h4 class="card-title">
+                     <div class="d-flex bd-highlight">
+                       <div class="p-2 w-100 bd-highlight" style="font-size: 20px ;">Formula Used</div>
+                       <div id="info" class="p-2 flex-shrink-1 bd-highlight" style="display: block;"><svg id="hidebtn" class="float-right" onclick= "showformula();"  width="20" height="20" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+                       </div>
+         
+                       <div id="exitinfo" class="p-2 flex-shrink-1 bd-highlight" style="display: none;"><button type="button" onclick= "hideformula();" class="close " data-bs-dismiss="alert" aria-label="Close" width="24" height="24">&times;</button></div>
+                      
+                       
+                     </div>
                     
-                  </div>
-                 
-                 </h4>
-                   
-                  <div class="alert alert-warning d-flex align-items-center" role="alert">
-                    
-                    <div id="formulacard" class="card-body" style="display: none;"> <p class="card-text"> Air Quantity (Q)</p>
-                      <p style="font-size: 14px;"> Q = \(α A2\sqrt{\frac{2(ΔP)}{ρ-(1-m^2)}}\) .......... eq (1)</p> 
-                      <p class="card-text"> Coefficent of Discharge(α)</p>
-                      <p style="font-size: 14px;">α = \(\frac{Q}{A2\sqrt{\frac{2(ΔP)}{ρ-(1-m^2)}}}\) .......... eq (2)</p>
-                      <p class="card-text"> Pressure Difference (ΔP)</p>
-                      <p style="font-size: 14px;"> P1= ρgh1 , P2=ρgh2 </p>
-                      <p style="font-size: 14px;">ΔP= P1-P2 = ρg(h1-h2)
-                      </p>       
-                      <p style="font-size: 14px;">\({A2\sqrt{\frac{2(ΔP)}{ρ-(1-m^2)}}}\)  .......... eq (3)</p>               
-                      <p style="font-size: 14px;"> where, </p>
-                        
-    <p style="font-size: 14px;">α = coefficient of discharge</p>
-    <p style="font-size: 14px;">A2 = Area of cross-section of the opening of the orifice plate</p>
-    <p style="font-size: 14px;">ΔP = Static pressure difference of the two sides of orifice plate i.e. (P1−P2). In this case, P1 is the static pressure before the plate and P2 is the static pressure after the plate.</p>
-    <p style="font-size: 14px;">ρ = Density of medium; in this case the medium is air so its value is 1.</p>
-    <p style="font-size: 14px;">m = Cross-section area ratio of plate of orifice opening with the duct opening = A2/A1 where as A1 is the cross-section area of the opening of the duct. In this experiment the design is in such a way that the value of m is 0.5.
-                      </p>
-                    </div>
-                  </div>
+                    </h4>
+                      
+                     <div class="alert alert-warning d-flex justify-content-center " role="alert">
+                       
+                       <div id="formulacard" class="card-body" style="display: none;"> <p class="card-text"> Air Quantity (Q)</p>
+                         <p style="font-size: 14px;"> Q = \(α A2\sqrt{\frac{2(ΔP)}{ρ-(1-m^2)}}\) .......... eq (1)</p> 
+                         <p class="card-text"> Coefficent of Discharge(α)</p>
+                         <p style="font-size: 14px;">α = \(\frac{Q}{A2\sqrt{\frac{2(ΔP)}{ρ-(1-m^2)}}}\) .......... eq (2)</p>
+                         <p class="card-text"> Pressure Difference (ΔP)</p>
+                         <p style="font-size: 14px;"> P1= ρgh1 , P2=ρgh2 </p>
+                         <p style="font-size: 14px;">ΔP= P1-P2 = ρg(h1-h2)
+                         </p>       
+                         <p style="font-size: 14px;">\({A2\sqrt{\frac{2(ΔP)}{ρ-(1-m^2)}}}\)  .......... eq (3)</p>               
+                         <p style="font-size: 14px;"> where, </p>
+                           
+       <p style="font-size: 14px;">α = coefficient of discharge</p>
+       <p style="font-size: 14px;">A2 = Area of cross-section of the opening of the orifice plate</p>
+       <p style="font-size: 14px;">ΔP = Static pressure difference of the two sides of orifice plate i.e. (P1−P2). In this case, P1 is the static pressure before the plate and P2 is the static pressure after the plate.</p>
+       <p style="font-size: 14px;">ρ = Density of medium; in this case the medium is air so its value is 1.</p>
+       <p style="font-size: 14px;">m = Cross-section area ratio of plate of orifice opening with the duct opening = A2/A1 where as A1 is the cross-section area of the opening of the duct. In this experiment the design is in such a way that the value of m is 0.5.
+                         </p>
+                       </div>
+                       <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <symbol  id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                        </symbol>
+                      </svg>
+                     </div>
+                     
+                     
+                   </div>
+                  
                
-                </div>
+                 </div>
                 
-              </div>
-              
-              
-              <svg xmlns="http://www.w3.org/2000/svg" style="display: block;">
-                <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
-                </symbol>
-              </svg-->
-
+             
             <div id="obsanem" class="collapse card border-primary rounded border border-5" style="display:none;">
               <div class="card-body" style="background-color:rgb(224, 235, 255);">
           <p class="card-text" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Click on the Flow Control Device and then Anemometer traversing button</p>
@@ -286,11 +292,11 @@
          
           
         </div> 
-        <div id="obvtable" class="card border-primary rounded" style="display: none;">
+        <div id="obvtable" class="card border-primary rounded" style="display:none;">
             <div class="card-body" style="background-color:rgb(255, 235, 254);">
           <h4 class="card-title">Observation Table</h4>
-          <div class="table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl">
-              <table class="table table-bordered table-hover " id="obtable">
+          <div class="table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl" > <!-- style="height: 100px; overflow-y: auto;"-->
+              <table class="table table-bordered table-hover" id="obtable">
                 <thead>
                   <tr class="table-primary ">
                     <th>Obs No.</th>
@@ -308,6 +314,8 @@
               </div>
               </div>
               </div>
+
+             
             <!--/div-->
           <!--/div --> 
         
@@ -342,7 +350,7 @@
         Press OK, if you want to proceed for graph plot. Press cancel to exit from plotting
       </div>
       <div class="modal-footer">
-         <button type="button" class="btn btn-primary col-xs-3 col-sm-3 col-md-3 col-lg-3" data-dismiss="modal" onclick="showplotgraph();">OK</button>
+         <button type="button" class="btn btn-primary col-xs-3 col-sm-3 col-md-3 col-lg-3" onclick="showplotgraph();" data-dismiss="modal" >OK</button>
         <button type="button" class="btn btn-warning col-xs-4 col-sm-4 col-md-4 col-lg-4" data-dismiss="modal" onclick="cancelgrph();">Cancel</button>
       </div>
     </div>
@@ -402,5 +410,6 @@
   magnify("scale", 2);
   </script-->
 
+  
 </body>
 </html>

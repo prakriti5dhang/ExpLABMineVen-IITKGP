@@ -182,7 +182,7 @@ function anmeasure(){  /* anemometer traversing button*/
    document.getElementById('anemometerr').style.display="block";
    document.getElementById('btnobv').disabled=true;
    document.getElementById('anmbtn').disabled=true;
-
+   document.getElementById('velread').innerHTML='1st Velocity Reading';
     moveanemometer();
    
   
@@ -201,63 +201,6 @@ function anmeasure(){  /* anemometer traversing button*/
        count++; /* increase click count  */
        disp= count;
       // alert(disp);
-      
-      if(disp==1){ /* 1st click*/
-         document.getElementById('plate2').style.display="block";
-         document.getElementById('plate1').style.display="none";
-         document.getElementById('measure').style.display="none";
-         document.getElementById('velread').disabled=false;
-         document.getElementById('anotherread').style.display="none";
-         document.getElementById('datam').style.display="none";
-        
-         //document.getElementById('anemometerr').style.position="absolute";
-         document.getElementById('nobtn').display="none";
-
-      }
-      else if(disp==2){ /*2nd click*/
-         document.getElementById('plate3').style.display="block";
-         document.getElementById('plate2').style.display="none";
-         document.getElementById('measure').style.display="none";
-         document.getElementById('velread').disabled=false;
-         document.getElementById('anotherread').style.display="none";
-         document.getElementById('datam').style.display="none";
-         //document.getElementById('anemometerr').style.left="390px";
-        // document.getElementById('anemometerr').style.bottom="120px";
-         document.getElementById('nobtn').display="none";
-      }
-      else if(disp==3){ /*3rd click*/
-         document.getElementById('plate4').style.display="block";
-         document.getElementById('plate3').style.display="none";
-         document.getElementById('measure').style.display="none";
-         document.getElementById('velread').disabled=false;
-         document.getElementById('anotherread').style.display="none";
-         document.getElementById('datam').style.display="none";
-         document.getElementById('nobtn').display="none";
-      }
-      else if (disp==4){ /* 4th click*/
-         document.getElementById('plate5').style.display="block";
-         document.getElementById('plate4').style.display="none";
-         document.getElementById('measure').style.display="none";
-         document.getElementById('velread').disabled=false;
-         document.getElementById('anotherread').style.display="none";
-         document.getElementById('datam').style.display="none";
-         document.getElementById('nobtn').display="none";
-      }
-      else{
-         //document.getElementById('noplatesModal').modal="show";
-               // $('#noplatesModal').modal("show");
-         document.getElementById("noplatesModal").style.display = "block";
-         document.getElementById("noplatesModal").classList.add("show");
-        //document.getElementById("noplatesModal").classList.remove("show")
-        //alert("No more plates. Click Plot to view the canvas.");
-         /*document.getElementById('anotherread').style.display="block";
-         document.getElementById('anmbtn').disabled=true;
-         document.getElementById('nobtn').style.display="block";*/
-      }
-
-     
-
-
       document.getElementById('btnobv').disabled=true;
       
       document.getElementById('velr1').value='';
@@ -272,13 +215,84 @@ function anmeasure(){  /* anemometer traversing button*/
   document.getElementById('airflow').value='';
   document.getElementById('coeff').value='';
   
-  document.getElementById('velread').innerHTML=' Velocity Reading';
+  document.getElementById('velread').innerHTML='1st Velocity Reading';
+      if(disp==1){ /* 1st click*/
+         document.getElementById('plate2').style.display="block";
+         document.getElementById('plate1').style.display="none";
+         document.getElementById('measure').style.display="none";
+         document.getElementById('velread').disabled=false;
+         document.getElementById('anotherread').style.display="none";
+         document.getElementById('datam').style.display="none";
+        document.getElementById('pltbtn').display="none";
+
+      }
+      else if(disp==2){ /*2nd click*/
+         document.getElementById('plate3').style.display="block";
+         document.getElementById('plate2').style.display="none";
+         document.getElementById('measure').style.display="none";
+         document.getElementById('velread').disabled=false;
+         document.getElementById('anotherread').style.display="none";
+         document.getElementById('datam').style.display="none";
+         document.getElementById('pltbtn').display="none";
+         //document.getElementById('anemometerr').style.left="390px";
+        // document.getElementById('anemometerr').style.bottom="120px";
+        
+      }
+      else if(disp==3){ /*3rd click*/
+         document.getElementById('plate4').style.display="block";
+         document.getElementById('plate3').style.display="none";
+         document.getElementById('measure').style.display="none";
+         document.getElementById('velread').disabled=false;
+         document.getElementById('anotherread').style.display="none";
+         document.getElementById('datam').style.display="none";
+         document.getElementById('pltbtn').display="none";
+      }
+      else if (disp==4){ /* 4th click*/
+         document.getElementById('plate5').style.display="block";
+         document.getElementById('plate4').style.display="none";
+         document.getElementById('measure').style.display="none";
+         document.getElementById('velread').disabled=false;
+         document.getElementById('anotherread').style.display="none";
+         document.getElementById('datam').style.display="none";
+         document.getElementById('pltbtn').display="none";
+        
+         //document.getElementById('yesbtn').innerHTML='Plot';
+
+      }
+      else if(disp==5){
+         //document.getElementById('pltbtn').display="none";
+         document.getElementById('noplatesModal').modal="show";
+         document.getElementById("noplatesModal").classList.add("show");
+         /*document.getElementById('anotherread').style.display="block"
+         document.getElementById('pltbtn').style.display="block";
+         document.getElementById('yesbtn').style.display="none";*/
+         
+      }
+        
+         //document.getElementById('pltbtn').style.display="block";
+         //document.getElementById('graphd').style.display="block";
+         //showplotgraph();
+         //document.getElementById('noplatesModal').modal="show";
+               // $('#noplatesModal').modal("show");
+         //document.getElementById("noplatesModal").style.display = "block";
+         //document.getElementById("noplatesModal").classList.add("show");
+        //document.getElementById("noplatesModal").classList.remove("show")
+        //alert("No more plates. Click Plot to view the canvas.");
+         /*document.getElementById('anotherread').style.display="block";
+         document.getElementById('anmbtn').disabled=true;
+         document.getElementById('nobtn').style.display="block";*/
+      //}
+
+     
+
+
+      
 }
 
 function noplate(){ /* display plot button */
    document.getElementById('anotherread').style.display="block";
          document.getElementById('anmbtn').disabled=true;
-         document.getElementById('nobtn').style.display="block";
+         document.getElementById('pltbtn').style.display="block";
          document.getElementById("noplatesModal").style.display = "none";
      document.getElementById("noplatesModal").classList.remove("show");
      document.getElementById("yesbtn").disabled=true;
@@ -287,7 +301,7 @@ function noplate(){ /* display plot button */
 
 function closemodal(){  /*Close modal  */
    document.getElementById("noplatesModal").style.display = "none";
-    document.getElementById("noplatesModal").classList.remove("show");
+   document.getElementById("noplatesModal").classList.remove("show");
 }
 
 // Get the modal
@@ -305,9 +319,11 @@ function showplotgraph(){ /* no button to stop taking anothe sets of reading*/
   
    if (confirm(text) == true) {*/
       document.getElementById('graphd').style.display="block";
-    //document.getElementById('formulashow').style.display="block";
-    document.getElementById('nobtn').disabled=true;
-   document.getElementById('anotherread').style.display="none";
+    document.getElementById('formulashow').style.display="block";
+    document.getElementById('pltbtn').disabled=true;
+   document.getElementById('anotherread').style.display="block";
+   document.getElementById('pltbtn').disabled=true;
+  document.getElementById('yesbtn').disabled=true;
    document.getElementById('velr1').value='';
   document.getElementById('velr2').value='';
   document.getElementById('velr3').value='';
@@ -326,7 +342,7 @@ function showplotgraph(){ /* no button to stop taking anothe sets of reading*/
   document.getElementById('controlpanelv').style.display="block";
   document.getElementById('anmbtn').disabled=true;
   document.getElementById('obsanem').style.display="none";
-  //document.getElementById('formulashow').style.display="block";
+ 
   //document.getElementById('plotModal').style.display="none";
   //$('#plotModal').modal('hide');
 
@@ -363,13 +379,13 @@ function veloread(){  /* get the velocity reading*/
       velread1 = (2 + ((2.95 - 2) * Math.random())).toFixed(2);
       document.getElementById('velr1').value=velread1;
       document.getElementById('measurebtn').disabled=true; /*button for click to measure is disabled*/
-      document.getElementById('velread').innerHTML='1st Velocity Reading';
+      document.getElementById('velread').innerHTML='2nd Velocity Reading';
    }
    else if(dispv==2){ /* velocity reading 2*/
        velread2 = (3 + ((3.95 - 3) * Math.random())).toFixed(2);
       document.getElementById('velr2').value=velread2;
       document.getElementById('measurebtn').disabled=true;/*button for click to measure is disabled*/
-      document.getElementById('velread').innerHTML='2nd Velocity Reading';
+      document.getElementById('velread').innerHTML='3rd Velocity Reading';
    }
    else if(dispv==3){ /* velocity reading 2*/
        velread3 = (4 + ((4.95 - 4) * Math.random())).toFixed(2);
@@ -391,13 +407,13 @@ function veloread(){  /* get the velocity reading*/
       velread12 = (2.25 + ((2.75 - 2.25) * Math.random())).toFixed(2);
       document.getElementById('velr1').value=velread12;
       document.getElementById('measurebtn').disabled=true;/*button for click to measure is disabled*/
-      document.getElementById('velread').innerHTML='1st Velocity Reading';
+      document.getElementById('velread').innerHTML='2nd Velocity Reading';
    }
    else if(dispv==5){ /* velocity reading 2*/
       velread22 = (3.25 + ((3.75 - 3.25) * Math.random())).toFixed(2);
       document.getElementById('velr2').value=velread22;
       document.getElementById('measurebtn').disabled=true;/*button for click to measure is disabled*/
-      document.getElementById('velread').innerHTML='2nd Velocity Reading';
+      document.getElementById('velread').innerHTML='3rd Velocity Reading';
    }
    else if(dispv==6){ /* velocity reading 3*/
       velread32 = (4.25 + ((4.75 - 4.25) * Math.random())).toFixed(2);
@@ -414,13 +430,13 @@ function veloread(){  /* get the velocity reading*/
       velread13 = (2.6 + ((2.92 - 2.6) * Math.random())).toFixed(2);
       document.getElementById('velr1').value=velread13;
       document.getElementById('measurebtn').disabled=true;/*button for click to measure is disabled*/
-      document.getElementById('velread').innerHTML='1st Velocity Reading';
+      document.getElementById('velread').innerHTML='2nd Velocity Reading';
    }
    else if(dispv==8){ /* velocity reading 2*/
       velread23 = (3.6 + ((3.92 - 3.6) * Math.random())).toFixed(2);
       document.getElementById('velr2').value=velread23;
       document.getElementById('measurebtn').disabled=true;/*button for click to measure is disabled*/
-      document.getElementById('velread').innerHTML='2nd Velocity Reading';
+      document.getElementById('velread').innerHTML='3rd Velocity Reading';
    }
    else if(dispv==9){ /* velocity reading 3*/
       velread33 = (4.6 + ((4.92 - 4.6) * Math.random())).toFixed(2);
@@ -437,13 +453,13 @@ function veloread(){  /* get the velocity reading*/
       velread14 = (2.75 + ((2.95 - 2.75) * Math.random())).toFixed(2);
       document.getElementById('velr1').value=velread14;
       document.getElementById('measurebtn').disabled=true;/*button for click to measure is disabled*/
-      document.getElementById('velread').innerHTML='1st Velocity Reading';
+      document.getElementById('velread').innerHTML='2nd Velocity Reading';
    }
    else if(dispv==11){ /* velocity reading 2*/
       velread24 = (3.65 + ((3.65 - 3.65) * Math.random())).toFixed(2);
       document.getElementById('velr2').value=velread24;
       document.getElementById('measurebtn').disabled=true;/*button for click to measure is disabled*/
-      document.getElementById('velread').innerHTML='2nd Velocity Reading';
+      document.getElementById('velread').innerHTML='3rd Velocity Reading';
    }
    else if(dispv==12){ /* velocity reading 3*/
       velread34 = (4.75 + ((4.95 - 4.75) * Math.random())).toFixed(2);
@@ -460,13 +476,13 @@ function veloread(){  /* get the velocity reading*/
       velread15 = (3.75 + ((3.95 - 3.75) * Math.random())).toFixed(2);
       document.getElementById('velr1').value=velread15;
       document.getElementById('measurebtn').disabled=true;/*button for click to measure is disabled*/
-      document.getElementById('velread').innerHTML='1st Velocity Reading';
+      document.getElementById('velread').innerHTML='2nd Velocity Reading';
    }
    else if(dispv==14){ /* velocity reading 2*/
       velread25 = (4.65 + ((4.65 - 4.65) * Math.random())).toFixed(2);
       document.getElementById('velr2').value=velread25;
       document.getElementById('measurebtn').disabled=true;/*button for click to measure is disabled*/
-      document.getElementById('velread').innerHTML='2nd Velocity Reading';
+      document.getElementById('velread').innerHTML='3rd Velocity Reading';
    }
    else if(dispv==15){ /* velocity reading 3*/
       velread35 = (5.75 + ((7.75 - 7.75) * Math.random())).toFixed(2);

@@ -46,7 +46,7 @@ var row = otable.insertRow(++tabrowindex); // Row increment
  
 
     /*  Scroll down and after 3000 ms scroll up  */
-    document.body.scrollBy(0,500);
+    document.body.scrollBy(0,550);
     document.documentElement.scrollBy(0,500);
     setTimeout(function(){
         document.body.scrollTop = 50;
@@ -54,6 +54,43 @@ var row = otable.insertRow(++tabrowindex); // Row increment
     }, 3000);
 
    
+   /* rows = otable.rows;
+  for (i = 1; i < (rows.length ); i++) {
+   
+    x = rows[i].getElementsByTagName("td")[0];
+   
+    if (Number(x.innerHTML) == 5) {
+        document.getElementById('graphd').style.display="block";
+       // document.getElementById('formulashow').style.display="block";
+   
+   document.getElementById('anotherread').style.display="block";
+   document.getElementById('pltbtn').disabled=true;
+  document.getElementById('yesbtn').disabled=true;
+   document.getElementById('velr1').value='';
+  document.getElementById('velr2').value='';
+  document.getElementById('velr3').value='';
+
+  document.getElementById('mvelr').value='';
+  document.getElementById('aqr').value='';
+  document.getElementById('dm').value='';
+  document.getElementById('aration').value='';
+  document.getElementById('pdiff').value='';
+  document.getElementById('airflow').value='';
+  document.getElementById('coeff').value='';
+  document.getElementById('btnobv').disabled=true;
+  document.getElementById('measure').style.display="none";
+  document.getElementById('datam').style.display="none";
+  document.getElementById('obvtable').style.display="block";
+  document.getElementById('controlpanelv').style.display="block";
+  document.getElementById('anmbtn').disabled=true;
+  document.getElementById('obsanem').style.display="none";
+    }
+    else if(Number(x.innerHTML) < 5) {
+        document.getElementById('graphd').style.display="none";
+        
+      }
+  }*/
+ 
 
     }
 

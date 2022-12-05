@@ -5,7 +5,10 @@
 
 table,th,td{
     text-align: center;
+    font-size: medium;
+    width: 20%;
 }
+
 
 ol{
    font-size: 14px; 
